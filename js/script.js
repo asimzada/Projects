@@ -1361,6 +1361,21 @@ document.addEventListener("DOMContentLoaded", () => {
     galleryItems.forEach(
         (item, index) => {
 
+            item.setAttribute(
+                "tabindex",
+                "0"
+            );
+
+            item.setAttribute(
+                "role",
+                "button"
+            );
+
+            item.setAttribute(
+                "aria-label",
+                `Open gallery image ${index + 1}`
+            );
+
             item.addEventListener(
                 "click",
                 () => {
@@ -1392,6 +1407,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     body.classList.add(
                         "lightbox-open"
                     );
+
+                }
+            );
+
+            item.addEventListener(
+                "keydown",
+                event => {
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+
+                        event.preventDefault();
+
+                        item.click();
+
+                    }
 
                 }
             );
