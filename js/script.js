@@ -1206,6 +1206,167 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
+    const motionGalleryItems =
+        document.querySelectorAll(
+            ".gallery-item"
+        );
+
+    const motionGalleryFlight =
+        document.querySelector(
+            ".gallery-flight"
+        );
+
+    const motionGalleryBall =
+        document.querySelector(
+            ".gallery-ball"
+        );
+
+    const gallerySection =
+        document.querySelector(
+            ".gallery-section"
+        );
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+    if (
+        gallerySection &&
+        motionGalleryFlight &&
+        motionGalleryBall &&
+        motionGalleryItems.length > 1 &&
+        !prefersReducedMotion
+    ) {
+
+        let galleryAnimationFrame = null;
+
+        function updateGalleryBallPosition() {
+
+            const galleryRect =
+                gallerySection.getBoundingClientRect();
+
+            const viewportProgress =
+                Math.min(
+                    Math.max(
+                        (window.innerHeight - galleryRect.top) /
+                        (galleryRect.height + window.innerHeight),
+                        0
+                    ),
+                    1
+                );
+
+            const travel =
+                viewportProgress * (motionGalleryItems.length - 1);
+
+            const segmentIndex =
+                Math.min(
+                    Math.floor(travel),
+                    motionGalleryItems.length - 2
+                );
+
+            const localT =
+                travel - segmentIndex;
+
+            const itemA =
+                motionGalleryItems[segmentIndex];
+
+            const itemB =
+                motionGalleryItems[segmentIndex + 1];
+
+            const rectA =
+                itemA.getBoundingClientRect();
+
+            const rectB =
+                itemB.getBoundingClientRect();
+
+            const centerA = {
+                x: rectA.left - galleryRect.left + rectA.width / 2,
+                y: rectA.top - galleryRect.top + rectA.height / 2
+            };
+
+            const centerB = {
+                x: rectB.left - galleryRect.left + rectB.width / 2,
+                y: rectB.top - galleryRect.top + rectB.height / 2
+            };
+
+            const curveShift =
+                Math.min(
+                    180,
+                    Math.max(90, Math.abs(centerB.x - centerA.x) * 0.65)
+                );
+
+            const controlX =
+                (centerA.x + centerB.x) / 2 +
+                (centerB.x - centerA.x) * 0.14;
+
+            const controlY =
+                Math.min(centerA.y, centerB.y) -
+                curveShift;
+
+            const x =
+                (1 - localT) * (1 - localT) * centerA.x +
+                2 * (1 - localT) * localT * controlX +
+                localT * localT * centerB.x;
+
+            const y =
+                (1 - localT) * (1 - localT) * centerA.y +
+                2 * (1 - localT) * localT * controlY +
+                localT * localT * centerB.y;
+
+            motionGalleryBall.style.transform =
+                `translate3d(${x}px, ${y}px, 0)`;
+
+            motionGalleryItems.forEach(
+                (item, index) => {
+
+                    const normalized =
+                        index / (motionGalleryItems.length - 1);
+
+                    item.classList.toggle(
+                        "is-active",
+                        Math.abs(viewportProgress - normalized) < 0.14
+                    );
+
+                }
+            );
+
+        }
+
+        function requestGalleryBallUpdate() {
+
+            if (galleryAnimationFrame) {
+                cancelAnimationFrame(galleryAnimationFrame);
+            }
+
+            galleryAnimationFrame =
+                requestAnimationFrame(() => {
+
+                    updateGalleryBallPosition();
+                    galleryAnimationFrame = null;
+
+                });
+
+        }
+
+        requestGalleryBallUpdate();
+
+        window.addEventListener(
+            "scroll",
+            requestGalleryBallUpdate,
+            { passive: true }
+        );
+
+        window.addEventListener(
+            "resize",
+            requestGalleryBallUpdate,
+            { passive: true }
+        );
+
+    }
+
+
     /* =====================================================
        ACTIVE NAVIGATION
     ===================================================== */
@@ -1835,46 +1996,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
-
-    /* =====================================================
-       VIDEO
-    ===================================================== */
-
-    document.querySelectorAll(
-        ".hero-video"
-    ).forEach(
-        video => {
-
-            video.muted = true;
-
-            video.playsInline = true;
-
-
-            const play =
-                video.play();
-
-
-            if (
-                play &&
-                typeof play.catch ===
-                "function"
-            ) {
-
-                play.catch(
-                    () => {
-
-                        console.log(
-                            "Video autoplay blocked."
-                        );
-
-                    }
-                );
-
-            }
-
-        }
-    );
 
 
     /* =====================================================
