@@ -18,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         whatsappMessage:
             "Hello Waqas, I would like to enquire about golf coaching in Qatar.",
 
-        email:
-            "info@coachwaqas.com",
-
         slideDuration:
             6500
 
@@ -37,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader =
         document.getElementById(
             "page-loader"
+        );
+
+    const logoTransition =
+        document.getElementById(
+            "logo-transition"
         );
 
     const loaderBar =
@@ -493,23 +495,34 @@ document.addEventListener("DOMContentLoaded", () => {
                                 "page-ready"
                             );
 
-
                             if (loader) {
 
                                 loader.classList.add(
                                     "loader-hidden"
                                 );
 
+                                setTimeout(() => {
+
+                                    logoTransition?.classList.add(
+                                        "active"
+                                    );
+
+                                }, 1200);
+
                             }
 
 
                             setTimeout(() => {
 
+                                logoTransition?.classList.remove(
+                                    "active"
+                                );
+
                                 body.classList.remove(
                                     "loading"
                                 );
 
-                            }, 900);
+                            }, 2300);
 
                         }, 450);
 
@@ -1021,22 +1034,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       EMAIL
-    ===================================================== */
-
-    document.querySelectorAll(
-        ".email-link"
-    ).forEach(
-        link => {
-
-            link.href =
-                `mailto:${SETTINGS.email}`;
-
-        }
-    );
-
-
-    /* =====================================================
        SMOOTH SCROLL
     ===================================================== */
 
@@ -1177,18 +1174,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             card.style.transitionDelay =
                 `${index * 90}ms`;
-
-        }
-    );
-
-
-    document.querySelectorAll(
-        ".timeline-item"
-    ).forEach(
-        (item, index) => {
-
-            item.style.transitionDelay =
-                `${index * 120}ms`;
 
         }
     );
