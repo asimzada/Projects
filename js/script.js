@@ -805,6 +805,91 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
+    let heroPointerStartX = 0;
+    let heroPointerStartY = 0;
+    let heroPointerActive = false;
+    let heroSuppressClick = false;
+
+
+    if (heroSection) {
+
+        heroSection.style.touchAction = "pan-y";
+
+        heroSection.addEventListener(
+            "pointerdown",
+            event => {
+
+                if (event.pointerType === "mouse" && event.button !== 0) {
+                    return;
+                }
+
+                heroPointerStartX = event.clientX;
+                heroPointerStartY = event.clientY;
+                heroPointerActive = true;
+                heroSection.setPointerCapture?.(event.pointerId);
+                stopSlider();
+
+            }
+        );
+
+        heroSection.addEventListener(
+            "pointerup",
+            event => {
+
+                if (!heroPointerActive) {
+                    return;
+                }
+
+                const distanceX = event.clientX - heroPointerStartX;
+                const distanceY = event.clientY - heroPointerStartY;
+
+                heroPointerActive = false;
+
+                if (
+                    Math.abs(distanceX) >= 45 &&
+                    Math.abs(distanceX) > Math.abs(distanceY)
+                ) {
+                    heroSuppressClick = true;
+
+                    if (distanceX < 0) {
+                        nextSlide();
+                    } else {
+                        previousSlide();
+                    }
+                }
+
+                startSlider();
+
+            }
+        );
+
+        heroSection.addEventListener(
+            "pointercancel",
+            () => {
+
+                heroPointerActive = false;
+                startSlider();
+
+            }
+        );
+
+        heroSection.addEventListener(
+            "click",
+            event => {
+
+                if (heroSuppressClick) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    heroSuppressClick = false;
+                }
+
+            },
+            true
+        );
+
+    }
+
+
     showSlide(0);
 
     startSlider();

@@ -8098,6 +8098,18 @@ body.page-ready .header-inner::after {
     animation-name: heroCinematicReveal;
 }
 
+.hero-content[data-active-slide="1"] .hero-main-slide-1 {
+    width: min(48%, 560px);
+}
+
+.hero-content[data-active-slide="1"] .hero-title-small {
+    font-size: clamp(34px, 4.2vw, 64px);
+}
+
+.hero-content[data-active-slide="1"] .hero-title-large {
+    font-size: clamp(52px, 6.8vw, 104px);
+}
+
 .hero-slide[data-slide="2"] .hero-slide-overlay {
     background: linear-gradient(90deg, rgba(5,13,9,.2), rgba(5,13,9,.65));
 }
@@ -8149,6 +8161,18 @@ body.page-ready .header-inner::after {
 }
 
 @media (max-width: 800px) {
+
+    .hero-content[data-active-slide="1"] .hero-main-slide-1 {
+        width: min(58%, 300px);
+    }
+
+    .hero-content[data-active-slide="1"] .hero-title-small {
+        font-size: clamp(22px, 5.8vw, 32px);
+    }
+
+    .hero-content[data-active-slide="1"] .hero-title-large {
+        font-size: clamp(32px, 8.2vw, 46px);
+    }
 
     .hero-content[data-active-slide="2"] .hero-topline,
     .hero-content[data-active-slide="3"] .hero-topline,
