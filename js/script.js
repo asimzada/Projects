@@ -1117,6 +1117,48 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
+    const yearlyPackageDialog =
+        document.getElementById("yearly-package-dialog");
+
+    const yearlyPackageOpen =
+        document.getElementById("yearly-package-open");
+
+    const yearlyPackageClose =
+        document.getElementById("yearly-package-close");
+
+    yearlyPackageOpen?.addEventListener(
+        "click",
+        () => {
+            if (
+                yearlyPackageDialog instanceof HTMLDialogElement &&
+                !yearlyPackageDialog.open
+            ) {
+                yearlyPackageDialog.showModal();
+            }
+        }
+    );
+
+    yearlyPackageClose?.addEventListener(
+        "click",
+        () => {
+            if (yearlyPackageDialog instanceof HTMLDialogElement) {
+                yearlyPackageDialog.close();
+            }
+        }
+    );
+
+    yearlyPackageDialog?.addEventListener(
+        "click",
+        event => {
+            if (
+                event.target === yearlyPackageDialog &&
+                yearlyPackageDialog instanceof HTMLDialogElement
+            ) {
+                yearlyPackageDialog.close();
+            }
+        }
+    );
+
 
     /* =====================================================
        SMOOTH SCROLL
