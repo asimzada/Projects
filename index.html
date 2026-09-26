@@ -87,7 +87,7 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
         rel="stylesheet"
     >
 
@@ -252,23 +252,23 @@
             aria-label="Main navigation"
         >
 
-            <a href="#home" class="nav-link">
+            <a href="#home" class="nav-link" data-i18n="navHome">
                 Home
             </a>
 
-            <a href="#about" class="nav-link">
+            <a href="#about" class="nav-link" data-i18n="navAbout">
                 About
             </a>
 
-            <a href="#coaching" class="nav-link">
+            <a href="#coaching" class="nav-link" data-i18n="navCoaching">
                 Coaching
             </a>
 
-            <a href="#plan" class="nav-link">
+            <a href="#plan" class="nav-link" data-i18n="navPlan">
                 Package
             </a>
 
-            <a href="#contact" class="nav-link">
+            <a href="#contact" class="nav-link" data-i18n="navContact">
                 Contact
             </a>
 
@@ -278,18 +278,53 @@
 
         <!-- HEADER CTA -->
 
-        <a
-            href="#contact"
-            class="header-cta"
-        >
+        <div class="header-actions">
 
-            <span>
-                Enquire
-            </span>
+            <div
+                id="language-toggle"
+                class="language-toggle"
+                aria-label="Language selector"
+                role="group"
+            >
+                <button
+                    type="button"
+                    class="lang-option active"
+                    data-lang="en"
+                    aria-pressed="true"
+                    aria-label="English"
+                    title="English"
+                >
+                    <span class="flag flag-uk" aria-hidden="true"></span>
+                    <span class="lang-text">English</span>
+                </button>
 
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <button
+                    type="button"
+                    class="lang-option"
+                    data-lang="ar"
+                    aria-pressed="false"
+                    aria-label="Arabic"
+                    title="Arabic"
+                >
+                    <span class="flag flag-qatar" aria-hidden="true"></span>
+                    <span class="lang-text">العربية</span>
+                </button>
+            </div>
 
-        </a>
+            <a
+                href="#contact"
+                class="header-cta"
+            >
+
+                <span data-i18n="enquire">
+                    Enquire
+                </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
 
 
 
@@ -504,11 +539,11 @@
 
             <span class="hero-line"></span>
 
-            <span>
+            <span data-i18n="heroTestimonial">
                 USGTF PROFESSIONAL
             </span>
 
-            <span class="hero-location">
+            <span class="hero-location" data-i18n="heroLocation">
                 DOHA, QATAR
             </span>
 
@@ -523,18 +558,18 @@
                 id="hero-title"
             >
 
-                <span class="hero-title-small">
+                <span class="hero-title-small" data-i18n="heroSmall">
                     Golf Coaching
                 </span>
 
-                <span class="hero-title-large">
+                <span class="hero-title-large" data-i18n="heroLarge">
                     in Qatar
                 </span>
 
             </h1>
 
 
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="heroDesc">
 
                 Practical coaching for beginners,
                 intermediate and advanced players.

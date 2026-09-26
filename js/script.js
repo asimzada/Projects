@@ -23,6 +23,262 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
+    const translations = {
+        en: {
+            navHome: "Home",
+            navAbout: "About",
+            navCoaching: "Coaching",
+            navPlan: "Package",
+            navContact: "Contact",
+            enquire: "Enquire",
+            menu: "Menu",
+            heroTestimonial: "USGTF PROFESSIONAL",
+            heroLocation: "DOHA, QATAR",
+            heroSmall: "Golf Coaching",
+            heroLarge: "in Qatar",
+            heroDesc: "Practical coaching for beginners, intermediate and advanced players.",
+            explore: "Explore Coaching",
+            discover: "Discover Coaching",
+            book: "Book a Lesson",
+            startJourney: "Start Your Journey",
+            meetCoach: "Meet Your Coach",
+            hero1Label: "PERSONAL GOLF COACHING",
+            hero1TitleA: "PLAY WITH",
+            hero1TitleB: "PURPOSE.",
+            hero1Text: "Build a more consistent swing, sharper decisions, and greater confidence on the course.",
+            hero2Label: "PERFORMANCE · PRECISION · PROGRESS",
+            hero2TitleA: "YOUR GAME.",
+            hero2TitleB: "YOUR NEXT LEVEL.",
+            hero2Text: "Structured coaching designed around your goals, your game, and your progress.",
+            hero3Label: "COACHING IN DOHA",
+            hero3TitleA: "CONFIDENCE",
+            hero3TitleB: "STARTS HERE.",
+            hero3Text: "Practical guidance to help you step onto the course with greater clarity and confidence.",
+            hero4Label: "ALL LEVELS WELCOME",
+            hero4TitleA: "FROM FIRST SWING",
+            hero4TitleB: "TO FINER DETAILS.",
+            hero4Text: "Coaching for beginners, intermediate players, and golfers looking to refine their game.",
+            hero5Label: "WAQAS ALBLOUSHI · USGTF PROFESSIONAL",
+            hero5TitleA: "MAKE EVERY",
+            hero5TitleB: "SHOT COUNT.",
+            hero5Text: "Develop the skills, course awareness, and confidence to play with greater intention.",
+            contact: "Contact",
+            footerBook: "Book via WhatsApp",
+            annualTitle: "Yearly Coaching Package",
+            annualLabel: "PRIVATE CLIENT · ANNUAL PROGRAM",
+            annualDesc: "A full year of dedicated coaching for players ready to take their game further.",
+            annualSave: "30% SAVING · SAVE $5,400",
+            annualPerYear: "/ YEAR",
+            annualAltText: "One annual package $18,000 when paid month by month",
+            annualLessonCount: "120 private lessons · 10 sessions per month",
+            annualFeature1: "Full swing, short game, putting, chipping and bunker play",
+            annualFeature2: "Coaching tailored to your level and goals",
+            annualFeature3: "Flexible scheduling via WhatsApp",
+            annualFeature4: "Easy date or time changes through WhatsApp",
+            annualFeature5: "Best value for serious players",
+            annualButton: "Enquire About the Yearly Package",
+            monthlyHeading: "Monthly Coaching Package",
+            monthlyIntro: "10 private golf coaching lessons each month, scheduled around your availability. Suitable for beginners, intermediate and advanced players.",
+            monthlyTag: "MONTHLY PACKAGE",
+            monthlyLabel: "MONTHLY",
+            monthlyButton: "Enquire About Coaching",
+            seriousPlayers: "FOR SERIOUS PLAYERS",
+            seriousPlayersText: "Ready to commit to a full year of focused coaching?",
+            seriousPlayersButton: "Discover the Yearly Package"
+        },
+        ar: {
+            navHome: "الرئيسية",
+            navAbout: "من نحن",
+            navCoaching: "التدريب",
+            navPlan: "الباقات",
+            navContact: "تواصل",
+            enquire: "استفسار",
+            menu: "القائمة",
+            heroTestimonial: "محترف USGTF",
+            heroLocation: "الدوحة، قطر",
+            heroSmall: "تدريب الجولف",
+            heroLarge: "في قطر",
+            heroDesc: "تدريب عملي للاعبين المبتدئين والمتوسطين والمتقدمين.",
+            explore: "استكشف التدريب",
+            discover: "اكتشف التدريب",
+            book: "احجز جلسة",
+            startJourney: "ابدأ رحلتك",
+            meetCoach: "قابل المدرب",
+            hero1Label: "تدريب شخصي للجولف",
+            hero1TitleA: "العب",
+            hero1TitleB: "بهدف.",
+            hero1Text: "ابنِ ضربة أكثر اتساقاً، قرارات أكثر دقة، وثقة أكبر على الملعب.",
+            hero2Label: "الأداء · الدقة · التقدم",
+            hero2TitleA: "لعبتك.",
+            hero2TitleB: "المستوى التالي.",
+            hero2Text: "تدريب منظم مصمم وفق أهدافك، ومستواك، وتقدمك في اللعبة.",
+            hero3Label: "التدريب في الدوحة",
+            hero3TitleA: "الثقة",
+            hero3TitleB: "تبدأ هنا.",
+            hero3Text: "إرشاد عملي يساعدك على دخول الملعب بوضوح وثقة أكبر.",
+            hero4Label: "جميع المستويات مرحب بها",
+            hero4TitleA: "من الضربة الأولى",
+            hero4TitleB: "إلى التفاصيل الدقيقة.",
+            hero4Text: "تدريب للمبتدئين واللاعبين المتوسطين ولكل من يسعى إلى تطوير مستواه في اللعبة.",
+            hero5Label: "وقاص البلوشي · محترف USGTF",
+            hero5TitleA: "اجعل كل",
+            hero5TitleB: "ضربة ذات قيمة.",
+            hero5Text: "طور مهاراتك، ووعي الملعب، والثقة للعب بنية واضحة.",
+            contact: "تواصل",
+            footerBook: "احجز عبر واتساب",
+            annualTitle: "باقة التدريب السنوية",
+            annualLabel: "عميل خاص · برنامج سنوي",
+            annualDesc: "عام كامل من التدريب المخصص للاعبين المستعدين لتطوير مستواهم أكثر.",
+            annualSave: "خصم 30٪ · وفّرت 5400 دولار",
+            annualPerYear: "/ سنة",
+            annualAltText: "حزمة سنوية واحدة 18000 دولار عند الدفع شهرياً",
+            annualLessonCount: "120 درساً خاصاً · 10 جلسات في الشهر",
+            annualFeature1: "الضربة الكاملة، اللعب القصير، ضربات التهديف، الضربات القصيرة، واللعب من الحواجز الرملية",
+            annualFeature2: "تدريب مخصص لمستواك وأهدافك",
+            annualFeature3: "جدولة مرنة عبر واتساب",
+            annualFeature4: "تغيير التاريخ أو الوقت بسهولة عبر واتساب",
+            annualFeature5: "أفضل قيمة للاعبين الجادين",
+            annualButton: "استفسر عن الباقة السنوية",
+            monthlyHeading: "باقة التدريب الشهرية",
+            monthlyIntro: "10 جلسات تدريبية خاصة كل شهر، وفق جدولك المتاح. مناسبة للمبتدئين والوسطاء والمتقدمين.",
+            monthlyTag: "الباقة الشهرية",
+            monthlyLabel: "شهري",
+            monthlyButton: "استفسر عن التدريب",
+            seriousPlayers: "للاعبين الجادين",
+            seriousPlayersText: "هل أنت مستعد لالتزام بدورة تدريبية كاملة على مدار العام؟",
+            seriousPlayersButton: "اكتشف الباقة السنوية"
+        }
+    };
+
+    const contentTranslations = {
+        "Loading website": "جارٍ تحميل الموقع",
+        "DOHA · QATAR": "الدوحة · قطر",
+        "WAQAS": "وقاص",
+        "ALBLOUSHI": "البلوشي",
+        "USGTF PROFESSIONAL": "محترف معتمد من USGTF",
+        "GOLF COACHING": "تدريب الجولف",
+        "MENU": "القائمة",
+        "About": "نبذة عني",
+        "Coaching": "التدريب",
+        "Package": "الباقات",
+        "Contact": "تواصل",
+        "PERSONAL GOLF COACHING": "تدريب شخصي على الجولف",
+        "PLAY WITH": "العب",
+        "PURPOSE.": "بهدف.",
+        "Build a more consistent swing, sharper decisions, and greater confidence on the course.": "طوّر ضربة أكثر ثباتاً، واتخذ قرارات أدق، والعب بثقة أكبر في الملعب.",
+        "PERFORMANCE · PRECISION · PROGRESS": "الأداء · الدقة · التطور",
+        "YOUR GAME.": "لعبتك.",
+        "YOUR NEXT LEVEL.": "نحو مستوى جديد.",
+        "Structured coaching designed around your goals, your game, and your progress.": "تدريب منظم يواكب أهدافك ومستواك وتطورك في اللعبة.",
+        "COACHING IN DOHA": "تدريب في الدوحة",
+        "CONFIDENCE": "الثقة",
+        "STARTS HERE.": "تبدأ من هنا.",
+        "Practical guidance to help you step onto the course with greater clarity and confidence.": "إرشادات عملية تساعدك على دخول الملعب بتركيز وثقة أكبر.",
+        "ALL LEVELS WELCOME": "نرحب بجميع المستويات",
+        "FROM FIRST SWING": "من الضربة الأولى",
+        "TO FINER DETAILS.": "إلى أدق التفاصيل.",
+        "Coaching for beginners, intermediate players, and golfers looking to refine their game.": "تدريب للمبتدئين والمتوسطين ولكل لاعب يسعى إلى تطوير أدائه.",
+        "WAQAS ALBLOUSHI · USGTF PROFESSIONAL": "وقاص البلوشي · محترف USGTF",
+        "MAKE EVERY": "اجعل كل",
+        "SHOT COUNT.": "ضربة تصنع الفرق.",
+        "Develop the skills, course awareness, and confidence to play with greater intention.": "طوّر مهاراتك وقراءتك للملعب وثقتك لتلعب بوعي أكبر.",
+        "Explore Coaching": "اكتشف التدريب",
+        "Enquire": "استفسر الآن",
+        "Discover Coaching": "اكتشف التدريب",
+        "Start Your Journey": "ابدأ رحلتك",
+        "Meet Your Coach": "تعرّف على مدربك",
+        "Book a Lesson": "احجز حصة تدريبية",
+        "SCROLL TO EXPLORE": "مرّر لاكتشاف المزيد",
+        "ABOUT · USGTF PROFESSIONAL · DOHA": "نبذة · محترف USGTF · الدوحة",
+        "Master the Basics .  Master Your Game": "أتقن الأساسيات. وارتقِ بلعبتك",
+        "WAQAS ALBLOUSHI": "وقاص البلوشي",
+        "USGTF PRO": "محترف USGTF",
+        "Waqas Albloushi": "وقاص البلوشي",
+        "Waqas Albloushi is a professional golf coach and competitive player with more than 19 years in the game. He started playing in 2007 at the age of 17 and continues to represent Qatar while coaching players of all levels around Doha.": "وقاص البلوشي مدرب جولف محترف ولاعب منافس، يمتلك خبرة تتجاوز 19 عاماً في اللعبة. بدأ ممارسة الجولف عام 2007، وهو في السابعة عشرة، ويواصل تمثيل قطر وتدريب لاعبين من مختلف المستويات في الدوحة.",
+        "His approach is simple: make the game clearer. Coaching focuses on strong foundations, better technique, course strategy, and the confidence to perform, whether you’re a beginner or an experienced player.": "نهجه واضح: تبسيط اللعبة. يركز التدريب على ترسيخ الأساسيات وتحسين التقنية واستراتيجية اللعب وبناء الثقة، للمبتدئين واللاعبين أصحاب الخبرة.",
+        "Years in Golf": "عاماً في الجولف",
+        "Started 2007": "بدأ عام 2007",
+        "Professional (2021)": "محترف منذ 2021",
+        "Represents Qatar": "يمثل دولة قطر",
+        "Languages": "اللغات",
+        "COACHING": "التدريب",
+        "Practical coaching.": "تدريب عملي يصنع الفرق.",
+        "Sessions start with understanding where you are and what you want to achieve. Coaching is tailored for beginners, intermediate and advanced players.": "نبدأ بفهم مستواك وما تطمح إلى تحقيقه، ثم نصمم التدريب ليناسب المبتدئين والمتوسطين والمتقدمين.",
+        "Full Swing": "الضربة الكاملة",
+        "Grip, posture, alignment and consistency.": "القبضة والوقفة والمحاذاة وثبات الأداء.",
+        "Short Game": "اللعب القصير",
+        "Control and confidence around the green.": "تحكم وثقة أكبر حول منطقة الحفرة.",
+        "Putting": "ضربات التهديف",
+        "Touch and distance control.": "إحساس أدق وتحكم بالمسافة.",
+        "Bunker Play": "اللعب من الحواجز الرملية",
+        "Practical techniques for different situations.": "أساليب عملية للتعامل مع مختلف المواقف.",
+        "The goal is to turn better golf understanding into confident decisions and better performance.": "هدفنا أن يتحول فهمك الأفضل للجولف إلى قرارات واثقة وأداء أقوى.",
+        "THE GOAL": "الهدف",
+        "Play with": "العب",
+        "confidence.": "بثقة.",
+        "USGTF CREDENTIALS": "اعتمادات USGTF",
+        "Professional credentials": "اعتمادات احترافية",
+        "View certificate": "عرض الشهادة",
+        "VIEW": "عرض",
+        "COACHING PLAN": "خطط التدريب",
+        "Monthly Coaching Package": "باقة التدريب الشهرية",
+        "10 private golf coaching lessons each month, scheduled around your availability. Suitable for beginners, intermediate and advanced players.": "10 حصص جولف خاصة شهرياً، تُجدول بما يناسب وقتك. مناسبة للمبتدئين والمتوسطين والمتقدمين.",
+        "MONTHLY PACKAGE": "الباقة الشهرية",
+        "DOHA": "الدوحة",
+        "MONTHLY": "شهرياً",
+        "/ MONTH": "/ الشهر",
+        "10 private lessons every month": "10 حصص تدريبية خاصة كل شهر",
+        "Full swing, short game, putting, chipping and bunker play": "الضربة الكاملة واللعب القصير والتهديف والضربات القصيرة واللعب من الحواجز الرملية",
+        "Coaching tailored to your level and goals": "تدريب يناسب مستواك وأهدافك",
+        "Flexible scheduling via WhatsApp": "مواعيد مرنة عبر واتساب",
+        "Confirmation after booking and payment": "تأكيد الحجز بعد إتمام الدفع",
+        "Easy date and time changes through WhatsApp": "تعديل الموعد أو الوقت بسهولة عبر واتساب",
+        "Package automatically renews every month": "تتجدد الباقة تلقائياً كل شهر",
+        "Enquire About Coaching": "استفسر عن التدريب",
+        "FOR SERIOUS PLAYERS": "للاعبين الجادين",
+        "Ready to commit to a full year of focused coaching?": "هل أنت مستعد لعام كامل من التدريب المركّز؟",
+        "Discover the Yearly Package": "اكتشف الباقة السنوية",
+        "PRIVATE CLIENT · ANNUAL PROGRAM": "عميل خاص · برنامج سنوي",
+        "Yearly Coaching Package": "باقة التدريب السنوية",
+        "A full year of dedicated coaching for players ready to take their game further.": "عام كامل من التدريب المخصص للاعبين المستعدين للارتقاء بمستواهم.",
+        "30% SAVING · SAVE $5,400": "وفّر 30٪ · خصم 5,400 دولار",
+        "/ YEAR": "/ السنة",
+        "One annual package": "باقة سنوية واحدة",
+        "when paid month by month": "عند الدفع شهرياً",
+        "120 private lessons": "120 حصة تدريبية خاصة",
+        "10 sessions per month": "10 حصص شهرياً",
+        "· 10 sessions per month": "· 10 حصص شهرياً",
+        "Easy date or time changes through WhatsApp": "تعديل الموعد أو الوقت بسهولة عبر واتساب",
+        "Best value for serious players": "أفضل قيمة للاعبين الجادين",
+        "Enquire About the Yearly Package": "استفسر عن الباقة السنوية",
+        "CONTACT": "تواصل",
+        "Ready to": "هل أنت مستعد",
+        "improve?": "للتطور؟",
+        "Tell Coach Waqas about your current level and what you’d like to work on. Coaching is available for all levels in QATAR.": "أخبر المدرب وقاص عن مستواك الحالي وما ترغب في تطويره. التدريب متاح لجميع المستويات في قطر.",
+        "FASTEST RESPONSE": "أسرع وسيلة للتواصل",
+        "Start a Conversation": "ابدأ محادثة",
+        "EMAIL": "البريد الإلكتروني",
+        "Send an Email": "أرسل رسالة بريدية",
+        "Waqas Albloushi Golf Coaching home": "الصفحة الرئيسية لتدريب الجولف مع وقاص البلوشي",
+        "Waqas Albloushi Golf Coaching": "تدريب الجولف مع وقاص البلوشي",
+        "PROFESSIONAL GOLF COACH": "مدرب جولف محترف",
+        "Footer navigation": "روابط التذييل",
+        "Doha, Qatar": "الدوحة، قطر",
+        "BOOK A GOLF LESSON": "احجز حصة جولف",
+        "Book via WhatsApp": "احجز عبر واتساب",
+        "© 2026 Waqas Albloushi Golf Coaching. All rights reserved.": "© 2026 تدريب الجولف مع وقاص البلوشي. جميع الحقوق محفوظة.",
+        "Certificate": "شهادة",
+        "Close certificate viewer": "إغلاق عارض الشهادات",
+        "Previous certificate": "الشهادة السابقة",
+        "Next certificate": "الشهادة التالية",
+        "Back to top": "العودة إلى الأعلى",
+        "Language selector": "اختيار اللغة",
+        "Main navigation": "التنقل الرئيسي",
+        "Open menu": "فتح القائمة",
+        "English": "الإنجليزية",
+        "Arabic": "العربية"
+    };
+
 
     /* =====================================================
        DOM
@@ -1093,20 +1349,192 @@ document.addEventListener("DOMContentLoaded", () => {
        WHATSAPP
     ===================================================== */
 
-    const whatsappURL =
-        `https://wa.me/${SETTINGS.whatsapp}` +
-        `?text=${encodeURIComponent(
-            SETTINGS.whatsappMessage
-        )}`;
+    const languageToggle = document.getElementById("language-toggle");
+    const langButtons = document.querySelectorAll(".lang-option");
+    const rtlLanguages = ["ar"];
+    const originalText = new WeakMap();
+    const originalAttributes = new WeakMap();
+    const textTranslations = Object.fromEntries(
+        Object.entries(contentTranslations).map(([source, target]) => [
+            source.trim().replace(/\s+/g, " "),
+            target
+        ])
+    );
 
+    Object.entries(translations.ar).forEach(([key, value]) => {
+        const english = translations.en[key];
+        if (english) {
+            textTranslations[english] = value;
+        }
+    });
+
+    const attributeTranslations = {
+        "Waqas Golf": "جولف مع وقاص",
+        "Golf coaching in Qatar": "تدريب الجولف في قطر",
+        "Professional golf instruction": "تعليم احترافي للجولف",
+        "Golf player on course": "لاعب جولف في الملعب",
+        "Golf course in Doha": "ملعب جولف في الدوحة",
+        "Golfer making a confident golf shot": "لاعب جولف ينفذ ضربة بثقة",
+        "Professional golf coaching session": "حصة تدريب جولف احترافية",
+        "Waqas Albloushi golf professional": "محترف الجولف وقاص البلوشي",
+        "Waqas coaching a golf player": "وقاص يدرب لاعب جولف",
+        "Show slide 1": "عرض الشريحة 1",
+        "Show slide 2": "عرض الشريحة 2",
+        "Show slide 3": "عرض الشريحة 3",
+        "Show slide 4": "عرض الشريحة 4",
+        "Show slide 5": "عرض الشريحة 5",
+        "Show slide 6": "عرض الشريحة 6",
+        "Close yearly coaching package": "إغلاق باقة التدريب السنوية",
+        "Close certificate viewer": "إغلاق عارض الشهادات",
+        "Previous certificate": "الشهادة السابقة",
+        "Next certificate": "الشهادة التالية",
+        "Back to top": "العودة إلى الأعلى",
+        "Language selector": "اختيار اللغة",
+        "Main navigation": "التنقل الرئيسي",
+        "Footer navigation": "روابط التذييل",
+        "Open menu": "فتح القائمة",
+        "English": "الإنجليزية",
+        "Arabic": "العربية"
+    };
+
+    function translatedWhatsappUrl(language, annual = false) {
+        const message = language === "ar"
+            ? annual
+                ? "مرحباً وقاص، أود الاستفسار عن باقة التدريب السنوية."
+                : "مرحباً وقاص، أود الاستفسار عن تدريب الجولف في قطر."
+            : annual
+                ? "Hello Waqas, I am interested in the Yearly Coaching Package."
+                : SETTINGS.whatsappMessage;
+
+        return `https://wa.me/${SETTINGS.whatsapp}?text=${encodeURIComponent(message)}`;
+    }
+
+    function applyLanguage(language) {
+        const activeLanguage = translations[language] || translations.en;
+        const html = document.documentElement;
+        const isArabic = language === "ar";
+
+        html.lang = language;
+        html.dir = rtlLanguages.includes(language) ? "rtl" : "ltr";
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT
+        );
+
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            const parent = node.parentElement;
+            if (!parent || parent.closest("script, style, noscript")) {
+                continue;
+            }
+
+            if (!originalText.has(node)) {
+                originalText.set(node, node.nodeValue);
+            }
+
+            const source = originalText.get(node);
+            const trimmed = source.trim().replace(/\s+/g, " ");
+            const translation = textTranslations[trimmed];
+            if (!trimmed || !translation) {
+                continue;
+            }
+
+            const leading = source.match(/^\s*/)[0];
+            const trailing = source.match(/\s*$/)[0];
+            node.nodeValue = isArabic
+                ? `${leading}${translation}${trailing}`
+                : source;
+        }
+
+        document.querySelectorAll("[aria-label], [alt], [title], [placeholder]").forEach(element => {
+            const attributes = ["aria-label", "alt", "title", "placeholder"];
+            attributes.forEach(attribute => {
+                if (!element.hasAttribute(attribute)) {
+                    return;
+                }
+
+                let sources = originalAttributes.get(element);
+                if (!sources) {
+                    sources = {};
+                    originalAttributes.set(element, sources);
+                }
+                if (!(attribute in sources)) {
+                    sources[attribute] = element.getAttribute(attribute);
+                }
+
+                const source = sources[attribute];
+                const translation = attributeTranslations[source] || textTranslations[source];
+                if (translation) {
+                    element.setAttribute(attribute, isArabic ? translation : source);
+                }
+            });
+        });
+
+        document.querySelectorAll(".lang-option").forEach(button => {
+            const isActive = button.dataset.lang === language;
+            button.classList.toggle("active", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        const langLabel = document.getElementById("language-label");
+        if (langLabel) {
+            langLabel.textContent = language === "ar" ? "AR" : "EN";
+        }
+
+        document.body.classList.toggle("rtl-mode", isArabic);
+        document.body.classList.toggle("ltr-mode", !isArabic);
+
+        document.title = isArabic
+            ? "وقاص البلوشي | مدرب جولف في الدوحة"
+            : "Waqas Albloushi | Golf Coach in Doha";
+        document.querySelector('meta[name="description"]')?.setAttribute(
+            "content",
+            isArabic
+                ? "وقاص البلوشي مدرب جولف محترف ولاعب منافس في الدوحة، قطر. محترف USGTF بخبرة تتجاوز 19 عاماً، يقدم تدريباً عملياً لجميع المستويات."
+                : "Waqas Albloushi is a professional golf coach and competitive player in Doha, Qatar. USGTF Professional with 19+ years in golf, offering practical coaching for beginners, intermediate and advanced players."
+        );
+        document.querySelector('meta[property="og:title"]')?.setAttribute(
+            "content",
+            isArabic
+                ? "وقاص البلوشي | تدريب الجولف في قطر"
+                : "Waqas Albloushi | Golf Coaching in Qatar"
+        );
+        document.querySelector('meta[property="og:description"]')?.setAttribute(
+            "content",
+            isArabic
+                ? "تدريب جولف احترافي في قطر مع وقاص البلوشي، محترف USGTF ولاعب منافس بخبرة تتجاوز 19 عاماً."
+                : "Professional golf coaching in Qatar by Waqas Albloushi, a USGTF Professional and competitive player with 19+ years in golf."
+        );
+
+        document.querySelectorAll(".whatsapp-link").forEach(link => {
+            link.href = translatedWhatsappUrl(language);
+        });
+        const yearlyEnquire = document.querySelector(".yearly-package-enquire");
+        if (yearlyEnquire) {
+            yearlyEnquire.href = translatedWhatsappUrl(language, true);
+        }
+    }
+
+    langButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            applyLanguage(button.dataset.lang);
+            localStorage.setItem("preferred-language", button.dataset.lang);
+        });
+    });
+
+    let savedLanguage = "en";
+    try {
+        savedLanguage = localStorage.getItem("preferred-language") || "en";
+    } catch (error) {
+        savedLanguage = "en";
+    }
+    applyLanguage(savedLanguage);
 
     document.querySelectorAll(
         ".whatsapp-link"
     ).forEach(
         link => {
-
-            link.href =
-                whatsappURL;
 
             link.target =
                 "_blank";
