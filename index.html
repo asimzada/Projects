@@ -148,20 +148,11 @@
         </div>
 
 
-        <div class="loader-name-wrap">
+        <div class="loader-logo-wrap">
+    <img src="./assets/images/logo.png" alt="Waqas Golf" class="loader-logo">
+</div>
 
-            <div class="loader-name">
-                WAQAS
-            </div>
-
-            <div class="loader-name loader-last">
-                ALBLOUSHI
-            </div>
-
-        </div>
-
-
-        <div class="loader-role">
+<div class="loader-role">
             USGTF PROFESSIONAL
         </div>
 
@@ -375,24 +366,29 @@
 
         <nav class="mobile-nav">
 
-            <a href="#about" class="mobile-menu-link">
+            <a href="#home" class="mobile-menu-link">
                 <span>01</span>
-                About
+                <span data-i18n="navHome">Home</span>
+            </a>
+
+            <a href="#about" class="mobile-menu-link">
+                <span>02</span>
+                <span data-i18n="navAbout">About</span>
             </a>
 
             <a href="#coaching" class="mobile-menu-link">
-                <span>02</span>
-                Coaching
+                <span>03</span>
+                <span data-i18n="navCoaching">Coaching</span>
             </a>
 
             <a href="#plan" class="mobile-menu-link">
-                <span>03</span>
-                Package
+                <span>04</span>
+                <span data-i18n="navPlan">Package</span>
             </a>
 
             <a href="#contact" class="mobile-menu-link">
-                <span>04</span>
-                Contact
+                <span>05</span>
+                <span data-i18n="navContact">Contact</span>
             </a>
 
         </nav>
@@ -650,7 +646,7 @@
             </p>
 
             <div class="hero-actions">
-                <a href="#journey" class="btn btn-outline-light">
+                <a href="#coaching" class="btn btn-outline-light">
                     <span>Start Your Journey</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -835,9 +831,7 @@
                 ABOUT · USGTF PROFESSIONAL · DOHA
             </span>
 
-            <h2>
-Master the Basics .  Master Your Game
-            </h2>
+            <h2>Master the Basics Master Your Game   </h2>
 
         </div>
 
@@ -1151,6 +1145,68 @@ Master the Basics .  Master Your Game
 
 
 
+
+<!-- =========================================================
+     COACHING VIDEO
+========================================================= -->
+
+<section id="video" class="video-section section-dark">
+
+    <div class="container">
+
+        <div class="video-heading reveal">
+
+            <span class="eyebrow" data-i18n="videoEyebrow">
+                ON THE COURSE
+            </span>
+
+            <h2 data-i18n="videoTitle">
+                See the game in motion.
+            </h2>
+
+            <p data-i18n="videoDesc">
+                A closer look at practical golf coaching, movement, technique and play.
+            </p>
+
+        </div>
+
+        <div class="video-showcase reveal">
+
+            <div class="video-frame">
+
+              <video
+    id="coach-video"
+    class="coach-video"
+    autoplay
+    muted
+    playsinline
+    preload="metadata"
+    poster="./assets/images/video-poster.jpg"
+    aria-label="Golf coaching video"
+>
+>
+                    <source src="./assets/videos/golf-coaching.mp4" type="video/mp4">
+                    <span data-i18n="videoFallback">
+                        Your browser does not support HTML5 video.
+                    </span>
+                </video>
+
+                <div class="video-corner video-corner-tl" aria-hidden="true"></div>
+                <div class="video-corner video-corner-br" aria-hidden="true"></div>
+
+            </div>
+
+            <div class="video-meta">
+                <span data-i18n="videoMeta">WAQAS ALBLOUSHI · GOLF COACHING · QATAR</span>
+                <span data-i18n="videoUploadHint"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- =========================================================
      CERTIFICATIONS
 ========================================================= -->
@@ -1350,8 +1406,8 @@ Master the Basics .  Master Your Game
         <div class="yearly-package-invite reveal">
 
             <div>
-                <span>FOR SERIOUS PLAYERS</span>
-                <p>Ready to commit to a full year of focused coaching?</p>
+                <span data-i18n="seriousPlayers">YOUR GAME, ALL YEAR</span>
+                <p data-i18n="seriousPlayersText">Discover the Yearly Package</p>
             </div>
 
             <button
@@ -1361,7 +1417,7 @@ Master the Basics .  Master Your Game
                 aria-haspopup="dialog"
                 aria-controls="yearly-package-dialog"
             >
-                <span>Discover the Yearly Package</span>
+                <span data-i18n="seriousPlayersButton">Discover the Yearly Package</span>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </button>
 
@@ -1396,12 +1452,50 @@ Master the Basics .  Master Your Game
         </div>
 
         <div class="yearly-package-price">
-            <span class="yearly-package-saving">30% SAVING · SAVE $5,400</span>
-            <div>
-                <strong>$12,600</strong>
-                <span>/ YEAR</span>
+            <span class="yearly-package-saving" data-i18n="annualSave">SAVE $3,000</span>
+
+            <div class="yearly-price-main">
+                <div>
+                    <small data-i18n="usdLabel">USD</small>
+                    <strong>$15,000</strong>
+                    <span data-i18n="usdPerYear">/ YEAR</span>
+                </div>
+
+                <div class="yearly-price-separator" aria-hidden="true">·</div>
+
+                <div>
+                    <small data-i18n="qarLabel">QAR</small>
+                    <strong>QAR 54,600</strong>
+                    <span data-i18n="qarPerYear">/ YEAR</span>
+                </div>
             </div>
-            <p>One annual package <s>$18,000</s> when paid month by month</p>
+
+            <p data-i18n="annualAltText">Original total $18,000 · Save $3,000 · Final price $15,000</p>
+        </div>
+
+        <div class="currency-converter reveal" data-currency-converter>
+            <div class="currency-converter-head">
+                <span data-i18n="currencyConverter">Currency Converter</span>
+                <small data-i18n="exchangeRate">1 USD = 3.64 QAR</small>
+            </div>
+
+            <div class="currency-converter-fields">
+                <div class="currency-field">
+                    <label for="usd-converter" data-i18n="usdLabel">USD</label>
+                    <input id="usd-converter" type="number" value="15000" min="0" step="100" inputmode="decimal">
+                </div>
+
+                <button type="button" id="currency-swap" class="currency-swap" aria-label="Swap USD and QAR" title="Swap USD and QAR">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="currency-field">
+                    <label for="qar-converter" data-i18n="qarLabel">QAR</label>
+                    <input id="qar-converter" type="number" value="54600" min="0" step="100" inputmode="decimal">
+                </div>
+            </div>
+
+            <div class="currency-converter-note" data-i18n="exchangeRate">1 USD = 3.64 QAR</div>
         </div>
 
         <div class="yearly-package-lesson-count">
@@ -1589,13 +1683,15 @@ Master the Basics .  Master Your Game
 
             <nav class="footer-nav" aria-label="Footer navigation">
 
-                <a href="#about">About</a>
+                <a href="#home" data-i18n="navHome">Home</a>
 
-                <a href="#coaching">Coaching</a>
+                <a href="#about" data-i18n="navAbout">About</a>
 
-                <a href="#plan">Package</a>
+                <a href="#coaching" data-i18n="navCoaching">Coaching</a>
 
-                <a href="#contact">Contact</a>
+                <a href="#plan" data-i18n="navPlan">Package</a>
+
+                <a href="#contact" data-i18n="navContact">Contact</a>
 
             </nav>
 

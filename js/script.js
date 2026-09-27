@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
             annualTitle: "Yearly Coaching Package",
             annualLabel: "PRIVATE CLIENT · ANNUAL PROGRAM",
             annualDesc: "A full year of dedicated coaching for players ready to take their game further.",
-            annualSave: "30% SAVING · SAVE $5,400",
-            annualPerYear: "/ YEAR",
-            annualAltText: "One annual package $18,000 when paid month by month",
+            annualSave: "SAVE $3,000",
+            annualPerYear: "/ YEAR · QAR 54,600 / YEAR",
+            annualAltText: "Regular price $18,000 · Save $3,000 · Final price $15,000",
             annualLessonCount: "120 private lessons · 10 sessions per month",
             annualFeature1: "Full swing, short game, putting, chipping and bunker play",
             annualFeature2: "Coaching tailored to your level and goals",
@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
             monthlyTag: "MONTHLY PACKAGE",
             monthlyLabel: "MONTHLY",
             monthlyButton: "Enquire About Coaching",
-            seriousPlayers: "FOR SERIOUS PLAYERS",
-            seriousPlayersText: "Ready to commit to a full year of focused coaching?",
+            seriousPlayers: "YOUR GAME, ALL YEAR",
+            seriousPlayersText: "Discover the Yearly Package",
             seriousPlayersButton: "Discover the Yearly Package"
         },
         ar: {
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
             annualTitle: "باقة التدريب السنوية",
             annualLabel: "عميل خاص · برنامج سنوي",
             annualDesc: "عام كامل من التدريب المخصص للاعبين المستعدين لتطوير مستواهم أكثر.",
-            annualSave: "خصم 30٪ · وفّرت 5400 دولار",
-            annualPerYear: "/ سنة",
-            annualAltText: "حزمة سنوية واحدة 18000 دولار عند الدفع شهرياً",
+            annualSave: "وفّر 3,000 دولار",
+            annualPerYear: "/ السنة · 54,600 ريال قطري / السنة",
+            annualAltText: "السعر الأساسي 18,000 دولار · وفّر 3,000 دولار · السعر النهائي 15,000 دولار",
             annualLessonCount: "120 درساً خاصاً · 10 جلسات في الشهر",
             annualFeature1: "الضربة الكاملة، اللعب القصير، ضربات التهديف، الضربات القصيرة، واللعب من الحواجز الرملية",
             annualFeature2: "تدريب مخصص لمستواك وأهدافك",
@@ -144,13 +144,25 @@ document.addEventListener("DOMContentLoaded", () => {
             monthlyTag: "الباقة الشهرية",
             monthlyLabel: "شهري",
             monthlyButton: "استفسر عن التدريب",
-            seriousPlayers: "للاعبين الجادين",
-            seriousPlayersText: "هل أنت مستعد لالتزام بدورة تدريبية كاملة على مدار العام؟",
+            seriousPlayers: "لعبتك طوال العام",
+            seriousPlayersText: "اكتشف باقة التدريب السنوية",
             seriousPlayersButton: "اكتشف الباقة السنوية"
         }
     };
 
-    const contentTranslations = {
+    const extraTranslations = {
+    "Home": "الرئيسية",
+    "Currency Converter": "محول العملات",
+    "ON THE COURSE": "على أرض الملعب",
+    "See the game in motion.": "شاهد اللعبة أثناء الحركة.",
+    "A closer look at practical golf coaching, movement, technique and play.": "نظرة أقرب على التدريب العملي وحركة الجسم والتقنية واللعب.",
+    "WAQAS ALBLOUSHI · GOLF COACHING · DOHA": "وقاص البلوشي · تدريب الجولف · الدوحة",
+    "Replace the video file in assets/videos/ when your final footage is ready.": "استبدل ملف الفيديو داخل assets/videos/ عند تجهيز اللقطات النهائية.",
+    "Your browser does not support HTML5 video.": "متصفحك لا يدعم فيديو HTML5.",
+    "Swap USD and QAR": "تبديل الدولار والريال القطري"
+};
+
+const contentTranslations = {
         "Loading website": "جارٍ تحميل الموقع",
         "DOHA · QATAR": "الدوحة · قطر",
         "WAQAS": "وقاص",
@@ -235,13 +247,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "Easy date and time changes through WhatsApp": "تعديل الموعد أو الوقت بسهولة عبر واتساب",
         "Package automatically renews every month": "تتجدد الباقة تلقائياً كل شهر",
         "Enquire About Coaching": "استفسر عن التدريب",
-        "FOR SERIOUS PLAYERS": "للاعبين الجادين",
+        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
         "Ready to commit to a full year of focused coaching?": "هل أنت مستعد لعام كامل من التدريب المركّز؟",
         "Discover the Yearly Package": "اكتشف الباقة السنوية",
         "PRIVATE CLIENT · ANNUAL PROGRAM": "عميل خاص · برنامج سنوي",
         "Yearly Coaching Package": "باقة التدريب السنوية",
         "A full year of dedicated coaching for players ready to take their game further.": "عام كامل من التدريب المخصص للاعبين المستعدين للارتقاء بمستواهم.",
-        "30% SAVING · SAVE $5,400": "وفّر 30٪ · خصم 5,400 دولار",
+        "SAVE $3,000": "وفّر 3,000 دولار",
         "/ YEAR": "/ السنة",
         "One annual package": "باقة سنوية واحدة",
         "when paid month by month": "عند الدفع شهرياً",
@@ -276,7 +288,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "Main navigation": "التنقل الرئيسي",
         "Open menu": "فتح القائمة",
         "English": "الإنجليزية",
-        "Arabic": "العربية"
+        "Arabic": "العربية",
+        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
+        "Discover the Yearly Package": "اكتشف باقة التدريب السنوية",
+        "SAVE $3,000": "وفّر 3,000 دولار",
+        "QAR 54,600 / YEAR": "54,600 ريال قطري / السنة",
+        "USD / YEAR": "دولار / السنة",
+        "QAR / YEAR": "ريال قطري / السنة",
+        "USD": "دولار أمريكي",
+        "QAR": "ريال قطري",
+        "USD ⇄ QAR": "دولار أمريكي ⇄ ريال قطري",
+        "1 USD = 3.64 QAR": "1 دولار أمريكي = 3.64 ريال قطري",
+        "Currency converter": "محول العملات",
+        "ON THE COURSE": "في الملعب",
+        "See the game in motion.": "شاهد اللعبة في حركة.",
+        "Upload your golf coaching video here.": "ارفع فيديو تدريب الجولف هنا.",
+        "Golf coaching video": "فيديو تدريب الجولف",
+        "Play golf coaching video": "تشغيل فيديو تدريب الجولف"
     };
 
 
@@ -291,12 +319,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(
             "page-loader"
         );
-
-    const logoTransition =
-        document.getElementById(
-            "logo-transition"
-        );
-
     const loaderBar =
         document.getElementById(
             "loader-progress-bar"
@@ -751,28 +773,18 @@ document.addEventListener("DOMContentLoaded", () => {
                                 "page-ready"
                             );
 
-                            if (loader) {
-
-                                loader.classList.add(
-                                    "loader-hidden"
-                                );
-
-                                setTimeout(() => {
-
-                                    logoTransition?.classList.add(
-                                        "active"
-                                    );
-
-                                }, 1200);
-
-                            }
-
+                            /* Logo and loading screen share one continuous duration.
+                               The separate logo-transition stage has been removed. */
 
                             setTimeout(() => {
 
-                                logoTransition?.classList.remove(
-                                    "active"
-                                );
+                                if (loader) {
+
+                                    loader.classList.add(
+                                        "loader-hidden"
+                                    );
+
+                                }
 
                                 body.classList.remove(
                                     "loading"
@@ -1394,7 +1406,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "Footer navigation": "روابط التذييل",
         "Open menu": "فتح القائمة",
         "English": "الإنجليزية",
-        "Arabic": "العربية"
+        "Arabic": "العربية",
+        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
+        "Discover the Yearly Package": "اكتشف باقة التدريب السنوية",
+        "SAVE $3,000": "وفّر 3,000 دولار",
+        "QAR 54,600 / YEAR": "54,600 ريال قطري / السنة",
+        "USD / YEAR": "دولار / السنة",
+        "QAR / YEAR": "ريال قطري / السنة",
+        "USD": "دولار أمريكي",
+        "QAR": "ريال قطري",
+        "USD ⇄ QAR": "دولار أمريكي ⇄ ريال قطري",
+        "1 USD = 3.64 QAR": "1 دولار أمريكي = 3.64 ريال قطري",
+        "Currency converter": "محول العملات",
+        "ON THE COURSE": "في الملعب",
+        "See the game in motion.": "شاهد اللعبة في حركة.",
+        "Upload your golf coaching video here.": "ارفع فيديو تدريب الجولف هنا.",
+        "Golf coaching video": "فيديو تدريب الجولف",
+        "Play golf coaching video": "تشغيل فيديو تدريب الجولف"
     };
 
     function translatedWhatsappUrl(language, annual = false) {
@@ -1408,6 +1436,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return `https://wa.me/${SETTINGS.whatsapp}?text=${encodeURIComponent(message)}`;
     }
+
+    Object.assign(textTranslations, extraTranslations);
 
     function applyLanguage(language) {
         const activeLanguage = translations[language] || translations.en;
@@ -1586,6 +1616,52 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     );
+
+
+    /* =====================================================
+       USD ⇄ QAR CONVERTER
+       Qatar's official USD/QAR peg is fixed at 3.64
+    ===================================================== */
+
+    const USD_TO_QAR = 3.64;
+    const usdInput = document.getElementById("usd-converter");
+    const qarInput = document.getElementById("qar-converter");
+    const currencySwap = document.getElementById("currency-swap");
+
+    function updateQarFromUsd() {
+        if (!usdInput || !qarInput) return;
+
+        const usd = Number(usdInput.value);
+        qarInput.value = Number.isFinite(usd)
+            ? (usd * USD_TO_QAR).toFixed(2)
+            : "";
+    }
+
+    function updateUsdFromQar() {
+        if (!usdInput || !qarInput) return;
+
+        const qar = Number(qarInput.value);
+        usdInput.value = Number.isFinite(qar)
+            ? (qar / USD_TO_QAR).toFixed(2)
+            : "";
+    }
+
+    usdInput?.addEventListener("input", updateQarFromUsd);
+    qarInput?.addEventListener("input", updateUsdFromQar);
+
+    currencySwap?.addEventListener("click", () => {
+        if (!usdInput || !qarInput) return;
+
+        const usd = usdInput.value;
+        const qar = qarInput.value;
+
+        usdInput.value = qar;
+        qarInput.value = usd;
+    });
+
+    if (usdInput && qarInput) {
+        updateQarFromUsd();
+    }
 
 
     /* =====================================================
@@ -2659,3 +2735,40 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
+/* =========================================================
+   VIDEO AUTOPLAY ON SCROLL
+========================================================= */
+
+const coachVideo = document.getElementById("coach-video");
+
+if (coachVideo) {
+
+    const videoObserver = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    // Start playing when video enters the viewport
+                    coachVideo.play().catch(() => {
+                        // Browser blocked autoplay
+                    });
+
+                } else {
+
+                    // Pause when video leaves the viewport
+                    coachVideo.pause();
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.55
+        }
+    );
+
+    videoObserver.observe(coachVideo);
+}

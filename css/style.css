@@ -579,6 +579,38 @@ body.page-ready .cursor-ring {
 }
 
 
+
+/* =========================================================
+   INTEGRATED LOADER LOGO
+========================================================= */
+
+.loader-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0 30px;
+    animation: loaderLogoIn .9s var(--ease) .08s both;
+}
+
+.loader-logo {
+    width: clamp(120px, 15vw, 205px);
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes loaderLogoIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .loader-location {
 
     margin-bottom: 32px;
@@ -8427,7 +8459,7 @@ body.page-ready .header-inner::after {
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(60px, 8vw, 126px);
     font-weight: 500;
-    letter-spacing: -.055em;
+    letter-spacing: -.055em;l
     line-height: .84;
 }
 
@@ -9469,5 +9501,302 @@ body.rtl-mode {
 
     .lang-option {
         padding: 0 5px;
+    }
+}
+/* =========================================================
+   FINAL POLISH
+========================================================= */
+
+.loader-role {
+    margin-top: 4px;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo + .loader-role {
+    letter-spacing: .22em;
+}
+
+.yearly-price-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 3vw, 36px);
+    margin-top: 14px;
+}
+
+.yearly-price-main > div:not(.yearly-price-separator) {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.yearly-price-main small {
+    color: var(--gold-light);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.yearly-price-main strong {
+    font-size: clamp(32px, 5vw, 58px);
+    letter-spacing: -.045em;
+}
+
+.yearly-price-main span {
+    color: var(--muted-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.yearly-price-separator {
+    color: var(--gold);
+    font-size: 28px;
+}
+
+.currency-converter {
+    width: min(100%, 760px);
+    margin: 26px auto 0;
+    padding: 22px;
+    border: 1px solid rgba(183,154,97,.24);
+    background: rgba(255,255,255,.035);
+    backdrop-filter: blur(12px);
+}
+
+.currency-converter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.currency-converter-head > span {
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.currency-converter-head small,
+.currency-converter-note {
+    color: var(--muted-light);
+    font-size: 10px;
+    letter-spacing: .08em;
+}
+
+.currency-converter-fields {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    align-items: end;
+    gap: 14px;
+}
+
+.currency-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--gold-light);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.currency-field input {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,.14);
+    outline: none;
+    background: rgba(0,0,0,.2);
+    color: var(--white);
+    font: 600 15px "Manrope", sans-serif;
+    transition: border-color .25s ease, background .25s ease;
+}
+
+.currency-field input:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,.06);
+}
+
+.currency-swap {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(183,154,97,.4);
+    background: transparent;
+    color: var(--gold-light);
+    cursor: pointer;
+    transition: transform .3s var(--ease), background .3s ease, color .3s ease;
+}
+
+.currency-swap:hover {
+    transform: rotate(180deg);
+    background: var(--gold);
+    color: var(--forest);
+}
+
+.currency-converter-note {
+    margin-top: 13px;
+}
+
+.video-section {
+    padding: clamp(80px, 10vw, 140px) 0;
+    overflow: hidden;
+}
+
+.video-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+
+.video-heading h2 {
+    margin-top: 15px;
+    color: var(--white);
+    font-family: "Cormorant Garamond", "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 92px);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.04em;
+}
+
+.video-heading p {
+    max-width: 620px;
+    margin-top: 22px;
+    color: var(--muted-light);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.video-showcase {
+    width: 100%;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.1);
+    background: #070c09;
+    box-shadow: 0 30px 90px rgba(0,0,0,.28);
+}
+
+.coach-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #070c09;
+    object-fit: contain;
+}
+
+.video-corner {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    pointer-events: none;
+    border-color: rgba(183,154,97,.8);
+}
+
+.video-corner-tl {
+    top: 14px;
+    left: 14px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.video-corner-br {
+    right: 14px;
+    bottom: 14px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 14px;
+    color: rgba(255,255,255,.46);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .loader-logo {
+        width: 135px;
+    }
+
+    .loader-logo-wrap {
+        margin-bottom: 24px;
+    }
+
+    .yearly-price-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .yearly-price-main > div:not(.yearly-price-separator) {
+        justify-content: center;
+    }
+
+    .yearly-price-separator {
+        display: none;
+    }
+
+    .currency-converter {
+        padding: 17px;
+    }
+
+    .currency-converter-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .currency-swap {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .currency-swap:hover {
+        transform: rotate(270deg);
+    }
+
+    .video-heading h2 {
+        font-size: clamp(44px, 14vw, 66px);
+    }
+
+    .video-meta {
+        flex-direction: column;
+        gap: 8px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slide img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        background: #0d1712;
+    }
+
+    .hero-slide.active img {
+        animation: heroZoomMobile 6s var(--ease) forwards;
+    }
+
+    @keyframes heroZoomMobile {
+        from {
+            transform: scale(1.015);
+        }
+        to {
+            transform: scale(1);
+        }
     }
 }
