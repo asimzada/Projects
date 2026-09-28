@@ -597,7 +597,9 @@ body.page-ready .cursor-ring {
     height: auto;
     max-height: 90px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+   filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
 }
 
 @keyframes loaderLogoIn {

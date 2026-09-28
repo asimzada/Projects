@@ -202,7 +202,7 @@ const contentTranslations = {
         "Book a Lesson": "احجز حصة تدريبية",
         "SCROLL TO EXPLORE": "مرّر لاكتشاف المزيد",
         "ABOUT · USGTF PROFESSIONAL · DOHA": "نبذة · محترف USGTF · الدوحة",
-        "Master the Basics .  Master Your Game": "أتقن الأساسيات. وارتقِ بلعبتك",
+        "Master the Basics Master Your Game": "أتقن الأساسيات. وارتقِ بلعبتك",
         "WAQAS ALBLOUSHI": "وقاص البلوشي",
         "USGTF PRO": "محترف USGTF",
         "Waqas Albloushi": "وقاص البلوشي",
