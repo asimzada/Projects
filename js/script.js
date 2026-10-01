@@ -1619,52 +1619,6 @@ const contentTranslations = {
 
 
     /* =====================================================
-       USD ⇄ QAR CONVERTER
-       Qatar's official USD/QAR peg is fixed at 3.64
-    ===================================================== */
-
-    const USD_TO_QAR = 3.64;
-    const usdInput = document.getElementById("usd-converter");
-    const qarInput = document.getElementById("qar-converter");
-    const currencySwap = document.getElementById("currency-swap");
-
-    function updateQarFromUsd() {
-        if (!usdInput || !qarInput) return;
-
-        const usd = Number(usdInput.value);
-        qarInput.value = Number.isFinite(usd)
-            ? (usd * USD_TO_QAR).toFixed(2)
-            : "";
-    }
-
-    function updateUsdFromQar() {
-        if (!usdInput || !qarInput) return;
-
-        const qar = Number(qarInput.value);
-        usdInput.value = Number.isFinite(qar)
-            ? (qar / USD_TO_QAR).toFixed(2)
-            : "";
-    }
-
-    usdInput?.addEventListener("input", updateQarFromUsd);
-    qarInput?.addEventListener("input", updateUsdFromQar);
-
-    currencySwap?.addEventListener("click", () => {
-        if (!usdInput || !qarInput) return;
-
-        const usd = usdInput.value;
-        const qar = qarInput.value;
-
-        usdInput.value = qar;
-        qarInput.value = usd;
-    });
-
-    if (usdInput && qarInput) {
-        updateQarFromUsd();
-    }
-
-
-    /* =====================================================
        SMOOTH SCROLL
     ===================================================== */
 
@@ -2771,4 +2725,240 @@ if (coachVideo) {
     );
 
     videoObserver.observe(coachVideo);
-}
+}/* =========================================================
+   PACKAGE CURRENCY SWITCH
+   USD / QAR
+========================================================= */
+
+(function () {
+
+    const USD_TO_QAR = 3.64;
+
+    const buttons = document.querySelectorAll(
+        ".plan-card .currency-btn"
+    );
+
+    const price = document.querySelector(
+        ".plan-card .currency-price"
+    );
+
+    if (!buttons.length || !price) return;
+
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const currency = this.dataset.currency;
+
+
+            /* -----------------------------------------
+               Update active button
+            ----------------------------------------- */
+
+            buttons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+
+            /* -----------------------------------------
+               Price animation
+            ----------------------------------------- */
+
+            price.style.opacity = "0";
+            price.style.transform = "translateY(6px)";
+
+
+            setTimeout(() => {
+
+                const usdAmount = Number(
+                    price.dataset.usd.replace(/[^0-9.]/g, "")
+                );
+
+
+                const qarAmount = Math.round(
+                    usdAmount * USD_TO_QAR
+                );
+
+
+                /* -----------------------------------------
+                   Change price
+                ----------------------------------------- */
+
+                if (currency === "usd") {
+
+                    price.textContent =
+                        price.dataset.usd;
+
+                } else {
+
+                    price.textContent =
+                        `QAR ${qarAmount.toLocaleString("en-US")}`;
+
+                }
+
+
+                /* -----------------------------------------
+                   Bring price back
+                ----------------------------------------- */
+
+                price.style.opacity = "1";
+                price.style.transform = "translateY(0)";
+
+            }, 180);
+
+        });
+
+    });
+
+})();
+/* =========================================================
+   YEARLY PACKAGE CURRENCY SWITCH
+   USD / QAR
+========================================================= */
+
+(function () {
+
+    const USD_TO_QAR = 3.64;
+
+    const buttons = document.querySelectorAll(
+        ".yearly-currency-btn"
+    );
+
+    const price = document.querySelector(
+        "#yearly-main-price"
+    );
+
+    const priceLabel = document.querySelector(
+        ".yearly-price-label span"
+    );
+
+    const perYear = document.querySelector(
+        ".yearly-price-main > span:last-child"
+    );
+
+
+    /* -----------------------------------------
+       SAFETY CHECK
+    ----------------------------------------- */
+
+    if (!buttons.length || !price) {
+        return;
+    }
+
+
+    /* -----------------------------------------
+       CURRENCY BUTTONS
+    ----------------------------------------- */
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const currency =
+                this.dataset.yearlyCurrency;
+
+
+            /* -----------------------------------------
+               REMOVE ACTIVE FROM ALL
+            ----------------------------------------- */
+
+            buttons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+
+            /* -----------------------------------------
+               ACTIVATE SELECTED CURRENCY
+            ----------------------------------------- */
+
+            this.classList.add("active");
+
+
+            /* -----------------------------------------
+               PRICE EXIT ANIMATION
+            ----------------------------------------- */
+
+            price.style.opacity = "0";
+
+            price.style.transform =
+                "translateY(8px)";
+
+
+            /* -----------------------------------------
+               UPDATE PRICE
+            ----------------------------------------- */
+
+            setTimeout(() => {
+
+                const usdAmount =
+                    Number(price.dataset.usd);
+
+                const qarAmount =
+                    Math.round(
+                        usdAmount * USD_TO_QAR
+                    );
+
+
+                if (currency === "usd") {
+
+                    price.textContent =
+                        `$${usdAmount.toLocaleString("en-US")}`;
+
+
+                    if (priceLabel) {
+                        priceLabel.textContent =
+                            "USD";
+                    }
+
+
+                    if (perYear) {
+                        perYear.textContent =
+                            "/ YEAR";
+                    }
+
+                }
+
+
+                if (currency === "qar") {
+
+                    price.textContent =
+                        `QAR ${qarAmount.toLocaleString("en-US")}`;
+
+
+                    if (priceLabel) {
+                        priceLabel.textContent =
+                            "QAR";
+                    }
+
+
+                    if (perYear) {
+                        perYear.textContent =
+                            "/ YEAR";
+                    }
+
+                }
+
+
+                /* -----------------------------------------
+                   PRICE RETURN ANIMATION
+                ----------------------------------------- */
+
+                requestAnimationFrame(() => {
+
+                    price.style.opacity = "1";
+
+                    price.style.transform =
+                        "translateY(0)";
+
+                });
+
+            }, 180);
+
+        });
+
+    });
+
+})();

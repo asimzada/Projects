@@ -9802,3 +9802,698 @@ body.rtl-mode {
         }
     }
 }
+/* =========================================================
+   CURRENCY SWITCH
+   DISTINCT COLOR COMBINATIONS
+========================================================= */
+
+.plan-card .currency-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    width: fit-content;
+
+    margin: 0 0 24px auto;
+    padding: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+
+    background: #111d17;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   BASE BUTTON
+========================================================= */
+
+.plan-card .currency-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-width: 82px;
+    height: 40px;
+
+    padding: 0 15px;
+
+    border-radius: 999px;
+    border: 1px solid transparent;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* =========================================================
+   USD
+========================================================= */
+
+.plan-card .currency-btn[data-currency="usd"] {
+    background: #24342d;
+
+    color: #f4f1e8;
+
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+.plan-card .currency-btn[data-currency="usd"]:hover {
+    background: #30453b;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   QAR
+========================================================= */
+
+.plan-card .currency-btn[data-currency="qar"] {
+    background: #351d28;
+
+    color: #e8a9bb;
+
+    border-color: rgba(170, 38, 73, 0.35);
+}
+
+.plan-card .currency-btn[data-currency="qar"]:hover {
+    background: #4a2533;
+    color: #ffd9e3;
+}
+
+
+/* =========================================================
+   FLAGS
+========================================================= */
+
+.plan-card .currency-flag {
+    font-size: 17px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+}
+
+
+/* =========================================================
+   ACTIVE USD
+========================================================= */
+
+.plan-card .currency-btn[data-currency="usd"].active {
+    background: #f5f1e7;
+
+    color: #102018;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   ACTIVE QAR
+========================================================= */
+
+.plan-card .currency-btn[data-currency="qar"].active {
+    background: #8a1f3d;
+
+    color: #ffffff;
+
+    border-color: #b93457;
+
+    box-shadow:
+        0 4px 18px rgba(138, 31, 61, 0.35);
+}
+
+
+/* =========================================================
+   ACTIVE QAR FLAG
+========================================================= */
+
+.plan-card .currency-btn[data-currency="qar"].active .currency-flag {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CLICK
+========================================================= */
+
+.plan-card .currency-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   PRICE ANIMATION
+========================================================= */
+
+.plan-card .currency-price {
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .plan-card .currency-switch {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .plan-card .currency-btn {
+        min-width: 74px;
+        height: 38px;
+
+        padding: 0 12px;
+
+        font-size: 10px;
+    }
+
+}
+/* =========================================================
+   YEARLY PACKAGE
+   PREMIUM CURRENCY SWITCH
+========================================================= */
+
+.yearly-currency-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    width: fit-content;
+
+    margin: 26px auto 22px;
+    padding: 5px;
+
+    background: #101a15;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   CURRENCY BUTTONS
+========================================================= */
+
+.yearly-currency-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 88px;
+    height: 42px;
+
+    padding: 0 17px;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.28s ease,
+        color 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   USD BUTTON
+========================================================= */
+
+.yearly-currency-btn[data-yearly-currency="usd"] {
+
+    background: #263a31;
+
+    color: #f5f1e8;
+
+    border-color:
+        rgba(255, 255, 255, 0.10);
+}
+
+
+.yearly-currency-btn[data-yearly-currency="usd"]:hover {
+
+    background: #344d40;
+
+    color: #ffffff;
+
+    border-color:
+        rgba(255, 255, 255, 0.20);
+}
+
+
+/* =========================================================
+   QAR BUTTON
+========================================================= */
+
+.yearly-currency-btn[data-yearly-currency="qar"] {
+
+    background: #351d28;
+
+    color: #e9aabc;
+
+    border-color:
+        rgba(170, 38, 73, 0.35);
+}
+
+
+.yearly-currency-btn[data-yearly-currency="qar"]:hover {
+
+    background: #4b2635;
+
+    color: #ffdce5;
+
+    border-color:
+        rgba(203, 58, 91, 0.55);
+}
+
+
+/* =========================================================
+   FLAGS
+========================================================= */
+
+.yearly-currency-flag {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 2px 3px rgba(0, 0, 0, 0.35)
+        );
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   ACTIVE USD
+========================================================= */
+
+.yearly-currency-btn[data-yearly-currency="usd"].active {
+
+    background: #f5f1e7;
+
+    color: #102018;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+/* =========================================================
+   ACTIVE QAR
+========================================================= */
+
+.yearly-currency-btn[data-yearly-currency="qar"].active {
+
+    background: #8a1f3d;
+
+    color: #ffffff;
+
+    border-color: #bd3a5c;
+
+    box-shadow:
+        0 5px 20px rgba(138, 31, 61, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   ACTIVE FLAG
+========================================================= */
+
+.yearly-currency-btn.active
+.yearly-currency-flag {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CLICK EFFECT
+========================================================= */
+
+.yearly-currency-btn:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   YEARLY PRICE AREA
+========================================================= */
+
+.yearly-price-main {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    margin-top: 4px;
+}
+
+
+/* Currency label */
+
+.yearly-price-label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* Main price */
+
+.yearly-main-price {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -0.03em;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Per year */
+
+.yearly-price-main > span:last-child {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+   SAVING BADGE
+========================================================= */
+
+.yearly-package-saving {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(138, 31, 61, 0.14);
+
+    border: 1px solid rgba(138, 31, 61, 0.32);
+
+    color: #e7a5b8;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   ORIGINAL PRICE / SAVING TEXT
+========================================================= */
+
+.yearly-package-price > p {
+
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.02em;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .yearly-currency-switch {
+
+        margin-top: 22px;
+        margin-bottom: 20px;
+
+        padding: 4px;
+
+    }
+
+
+    .yearly-currency-btn {
+
+        min-width: 78px;
+
+        height: 39px;
+
+        padding: 0 13px;
+
+        font-size: 10px;
+
+    }
+
+
+    .yearly-currency-flag {
+
+        font-size: 16px;
+
+    }
+
+
+    .yearly-main-price {
+
+        font-size: 46px;
+
+    }
+
+}
+/* =========================================================
+   YEARLY PACKAGE CURRENCY SWITCH
+========================================================= */
+
+(function () {
+
+    const USD_TO_QAR = 3.64;
+
+    const buttons = document.querySelectorAll(
+        ".yearly-currency-btn"
+    );
+
+    const price = document.querySelector(
+        "#yearly-main-price"
+    );
+
+    const priceLabel = document.querySelector(
+        ".yearly-price-label span"
+    );
+
+    const perYear = document.querySelector(
+        ".yearly-price-main > span:last-child"
+    );
+
+    if (!buttons.length || !price) return;
+
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const currency =
+                this.dataset.yearlyCurrency;
+
+
+            /* -----------------------------------------
+               ACTIVE BUTTON
+            ----------------------------------------- */
+
+            buttons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+
+            /* -----------------------------------------
+               PRICE FADE
+            ----------------------------------------- */
+
+            price.style.opacity = "0";
+            price.style.transform = "translateY(8px)";
+
+
+            setTimeout(() => {
+
+                const usdAmount =
+                    Number(price.dataset.usd);
+
+                const qarAmount =
+                    Math.round(
+                        usdAmount * USD_TO_QAR
+                    );
+
+
+                /* -----------------------------------------
+                   USD
+                ----------------------------------------- */
+
+                if (currency === "usd") {
+
+                    price.textContent =
+                        `$${usdAmount.toLocaleString("en-US")}`;
+
+                    if (priceLabel) {
+                        priceLabel.textContent = "USD";
+                    }
+
+                    if (perYear) {
+                        perYear.textContent = "/ YEAR";
+                    }
+
+                }
+
+
+                /* -----------------------------------------
+                   QAR
+                ----------------------------------------- */
+
+                if (currency === "qar") {
+
+                    price.textContent =
+                        `QAR ${qarAmount.toLocaleString("en-US")}`;
+
+                    if (priceLabel) {
+                        priceLabel.textContent = "QAR";
+                    }
+
+                    if (perYear) {
+                        perYear.textContent = "/ YEAR";
+                    }
+
+                }
+
+
+                /* -----------------------------------------
+                   SHOW PRICE
+                ----------------------------------------- */
+
+                price.style.opacity = "1";
+                price.style.transform =
+                    "translateY(0)";
+
+            }, 180);
+
+        });
+
+    });
+
+})();
