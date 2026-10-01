@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Currency Converter": "محول العملات",
     "ON THE COURSE": "على أرض الملعب",
     "See the game in motion.": "شاهد اللعبة أثناء الحركة.",
-    "A closer look at practical golf coaching, movement, technique and play.": "نظرة أقرب على التدريب العملي وحركة الجسم والتقنية واللعب.",
+    "A closer look at practical golf , movement, technique and play": "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب.",
     "WAQAS ALBLOUSHI · GOLF COACHING · DOHA": "وقاص البلوشي · تدريب الجولف · الدوحة",
     "Replace the video file in assets/videos/ when your final footage is ready.": "استبدل ملف الفيديو داخل assets/videos/ عند تجهيز اللقطات النهائية.",
     "Your browser does not support HTML5 video.": "متصفحك لا يدعم فيديو HTML5.",
