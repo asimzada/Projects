@@ -5,7 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-
     /* =====================================================
        SETTINGS
     ===================================================== */
@@ -23,8 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
+
+    /* =====================================================
+       TRANSLATIONS
+    ===================================================== */
+
     const translations = {
+
         en: {
+
             navHome: "Home",
             navAbout: "About",
             navCoaching: "Coaching",
@@ -32,43 +38,52 @@ document.addEventListener("DOMContentLoaded", () => {
             navContact: "Contact",
             enquire: "Enquire",
             menu: "Menu",
+
             heroTestimonial: "USGTF PROFESSIONAL",
             heroLocation: "DOHA, QATAR",
             heroSmall: "Golf Coaching",
             heroLarge: "in Qatar",
             heroDesc: "Practical coaching for beginners, intermediate and advanced players.",
+
             explore: "Explore Coaching",
             discover: "Discover Coaching",
             book: "Book a Lesson",
             startJourney: "Start Your Journey",
             meetCoach: "Meet Your Coach",
+
             hero1Label: "PERSONAL GOLF COACHING",
             hero1TitleA: "PLAY WITH",
             hero1TitleB: "PURPOSE.",
             hero1Text: "Build a more consistent swing, sharper decisions, and greater confidence on the course.",
+
             hero2Label: "PERFORMANCE · PRECISION · PROGRESS",
             hero2TitleA: "YOUR GAME.",
             hero2TitleB: "YOUR NEXT LEVEL.",
             hero2Text: "Structured coaching designed around your goals, your game, and your progress.",
+
             hero3Label: "COACHING IN DOHA",
             hero3TitleA: "CONFIDENCE",
             hero3TitleB: "STARTS HERE.",
             hero3Text: "Practical guidance to help you step onto the course with greater clarity and confidence.",
+
             hero4Label: "ALL LEVELS WELCOME",
             hero4TitleA: "FROM FIRST SWING",
             hero4TitleB: "TO FINER DETAILS.",
             hero4Text: "Coaching for beginners, intermediate players, and golfers looking to refine their game.",
+
             hero5Label: "WAQAS ALBLOUSHI · USGTF PROFESSIONAL",
             hero5TitleA: "MAKE EVERY",
             hero5TitleB: "SHOT COUNT.",
             hero5Text: "Develop the skills, course awareness, and confidence to play with greater intention.",
+
             contact: "Contact",
             footerBook: "Book via WhatsApp",
+
             annualTitle: "Yearly Coaching Package",
             annualLabel: "PRIVATE CLIENT · ANNUAL PROGRAM",
             annualDesc: "A full year of dedicated coaching for players ready to take their game further.",
             annualSave: "SAVE $3,000",
-            annualPerYear: "/ YEAR · QAR 54,600 / YEAR",
+            annualPerYear: "/ YEAR",
             annualAltText: "Regular price $18,000 · Save $3,000 · Final price $15,000",
             annualLessonCount: "120 private lessons · 10 sessions per month",
             annualFeature1: "Full swing, short game, putting, chipping and bunker play",
@@ -77,16 +92,24 @@ document.addEventListener("DOMContentLoaded", () => {
             annualFeature4: "Easy date or time changes through WhatsApp",
             annualFeature5: "Best value for serious players",
             annualButton: "Enquire About the Yearly Package",
+
             monthlyHeading: "Monthly Coaching Package",
             monthlyIntro: "10 private golf coaching lessons each month, scheduled around your availability. Suitable for beginners, intermediate and advanced players.",
             monthlyTag: "MONTHLY PACKAGE",
             monthlyLabel: "MONTHLY",
             monthlyButton: "Enquire About Coaching",
+
             seriousPlayers: "YOUR GAME, ALL YEAR",
             seriousPlayersText: "Discover the Yearly Package",
-            seriousPlayersButton: "Discover the Yearly Package"
+            seriousPlayersButton: "Discover the Yearly Package",
+
+            videoDesc: "A closer look at practical golf, movement, technique and play."
+
         },
+
+
         ar: {
+
             navHome: "الرئيسية",
             navAbout: "من نحن",
             navCoaching: "التدريب",
@@ -94,43 +117,52 @@ document.addEventListener("DOMContentLoaded", () => {
             navContact: "تواصل",
             enquire: "استفسار",
             menu: "القائمة",
+
             heroTestimonial: "محترف USGTF",
             heroLocation: "الدوحة، قطر",
             heroSmall: "تدريب الجولف",
             heroLarge: "في قطر",
             heroDesc: "تدريب عملي للاعبين المبتدئين والمتوسطين والمتقدمين.",
+
             explore: "استكشف التدريب",
             discover: "اكتشف التدريب",
             book: "احجز جلسة",
             startJourney: "ابدأ رحلتك",
             meetCoach: "قابل المدرب",
+
             hero1Label: "تدريب شخصي للجولف",
             hero1TitleA: "العب",
             hero1TitleB: "بهدف.",
             hero1Text: "ابنِ ضربة أكثر اتساقاً، قرارات أكثر دقة، وثقة أكبر على الملعب.",
+
             hero2Label: "الأداء · الدقة · التقدم",
             hero2TitleA: "لعبتك.",
             hero2TitleB: "المستوى التالي.",
             hero2Text: "تدريب منظم مصمم وفق أهدافك، ومستواك، وتقدمك في اللعبة.",
+
             hero3Label: "التدريب في الدوحة",
             hero3TitleA: "الثقة",
             hero3TitleB: "تبدأ هنا.",
             hero3Text: "إرشاد عملي يساعدك على دخول الملعب بوضوح وثقة أكبر.",
+
             hero4Label: "جميع المستويات مرحب بها",
             hero4TitleA: "من الضربة الأولى",
             hero4TitleB: "إلى التفاصيل الدقيقة.",
             hero4Text: "تدريب للمبتدئين واللاعبين المتوسطين ولكل من يسعى إلى تطوير مستواه في اللعبة.",
+
             hero5Label: "وقاص البلوشي · محترف USGTF",
             hero5TitleA: "اجعل كل",
             hero5TitleB: "ضربة ذات قيمة.",
             hero5Text: "طور مهاراتك، ووعي الملعب، والثقة للعب بنية واضحة.",
+
             contact: "تواصل",
             footerBook: "احجز عبر واتساب",
+
             annualTitle: "باقة التدريب السنوية",
             annualLabel: "عميل خاص · برنامج سنوي",
-            annualDesc: "عام كامل من التدريب المخصص للاعبين المستعدين لتطوير مستواهم أكثر.",
+            annualDesc: "عام كامل من التدريب المخصص للاعبين المستعدين للارتقاء بمستواهم.",
             annualSave: "وفّر 3,000 دولار",
-            annualPerYear: "/ السنة · 54,600 ريال قطري / السنة",
+            annualPerYear: "/ السنة",
             annualAltText: "السعر الأساسي 18,000 دولار · وفّر 3,000 دولار · السعر النهائي 15,000 دولار",
             annualLessonCount: "120 درساً خاصاً · 10 جلسات في الشهر",
             annualFeature1: "الضربة الكاملة، اللعب القصير، ضربات التهديف، الضربات القصيرة، واللعب من الحواجز الرملية",
@@ -139,172 +171,434 @@ document.addEventListener("DOMContentLoaded", () => {
             annualFeature4: "تغيير التاريخ أو الوقت بسهولة عبر واتساب",
             annualFeature5: "أفضل قيمة للاعبين الجادين",
             annualButton: "استفسر عن الباقة السنوية",
+
             monthlyHeading: "باقة التدريب الشهرية",
-            monthlyIntro: "10 جلسات تدريبية خاصة كل شهر، وفق جدولك المتاح. مناسبة للمبتدئين والوسطاء والمتقدمين.",
+            monthlyIntro: "10 جلسات تدريبية خاصة كل شهر، وفق جدولك المتاح. مناسبة للمبتدئين والمتوسطين والمتقدمين.",
             monthlyTag: "الباقة الشهرية",
             monthlyLabel: "شهري",
             monthlyButton: "استفسر عن التدريب",
+
             seriousPlayers: "لعبتك طوال العام",
             seriousPlayersText: "اكتشف باقة التدريب السنوية",
-            seriousPlayersButton: "اكتشف الباقة السنوية"
+            seriousPlayersButton: "اكتشف الباقة السنوية",
+
+            videoDesc: "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب."
+
         }
+
     };
 
-    const extraTranslations = {
-    "Home": "الرئيسية",
-    "Currency Converter": "محول العملات",
-    "ON THE COURSE": "على أرض الملعب",
-    "See the game in motion.": "شاهد اللعبة أثناء الحركة.",
-    "A closer look at practical golf , movement, technique and play": "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب.",
-    "WAQAS ALBLOUSHI · GOLF COACHING · DOHA": "وقاص البلوشي · تدريب الجولف · الدوحة",
-    "Replace the video file in assets/videos/ when your final footage is ready.": "استبدل ملف الفيديو داخل assets/videos/ عند تجهيز اللقطات النهائية.",
-    "Your browser does not support HTML5 video.": "متصفحك لا يدعم فيديو HTML5.",
-    "Swap USD and QAR": "تبديل الدولار والريال القطري"
-};
 
-const contentTranslations = {
+    /* =====================================================
+       CONTENT TRANSLATIONS
+    ===================================================== */
+
+    const contentTranslations = {
+
         "Loading website": "جارٍ تحميل الموقع",
         "DOHA · QATAR": "الدوحة · قطر",
         "WAQAS": "وقاص",
         "ALBLOUSHI": "البلوشي",
         "USGTF PROFESSIONAL": "محترف معتمد من USGTF",
         "GOLF COACHING": "تدريب الجولف",
+
         "MENU": "القائمة",
         "About": "نبذة عني",
         "Coaching": "التدريب",
         "Package": "الباقات",
         "Contact": "تواصل",
+
         "PERSONAL GOLF COACHING": "تدريب شخصي على الجولف",
         "PLAY WITH": "العب",
         "PURPOSE.": "بهدف.",
-        "Build a more consistent swing, sharper decisions, and greater confidence on the course.": "طوّر ضربة أكثر ثباتاً، واتخذ قرارات أدق، والعب بثقة أكبر في الملعب.",
-        "PERFORMANCE · PRECISION · PROGRESS": "الأداء · الدقة · التطور",
+
+        "Build a more consistent swing, sharper decisions, and greater confidence on the course.":
+            "طوّر ضربة أكثر ثباتاً، واتخذ قرارات أدق، والعب بثقة أكبر في الملعب.",
+
+        "PERFORMANCE · PRECISION · PROGRESS":
+            "الأداء · الدقة · التطور",
+
         "YOUR GAME.": "لعبتك.",
         "YOUR NEXT LEVEL.": "نحو مستوى جديد.",
-        "Structured coaching designed around your goals, your game, and your progress.": "تدريب منظم يواكب أهدافك ومستواك وتطورك في اللعبة.",
-        "COACHING IN DOHA": "تدريب في الدوحة",
-        "CONFIDENCE": "الثقة",
-        "STARTS HERE.": "تبدأ من هنا.",
-        "Practical guidance to help you step onto the course with greater clarity and confidence.": "إرشادات عملية تساعدك على دخول الملعب بتركيز وثقة أكبر.",
-        "ALL LEVELS WELCOME": "نرحب بجميع المستويات",
-        "FROM FIRST SWING": "من الضربة الأولى",
-        "TO FINER DETAILS.": "إلى أدق التفاصيل.",
-        "Coaching for beginners, intermediate players, and golfers looking to refine their game.": "تدريب للمبتدئين والمتوسطين ولكل لاعب يسعى إلى تطوير أدائه.",
-        "WAQAS ALBLOUSHI · USGTF PROFESSIONAL": "وقاص البلوشي · محترف USGTF",
-        "MAKE EVERY": "اجعل كل",
-        "SHOT COUNT.": "ضربة تصنع الفرق.",
-        "Develop the skills, course awareness, and confidence to play with greater intention.": "طوّر مهاراتك وقراءتك للملعب وثقتك لتلعب بوعي أكبر.",
-        "Explore Coaching": "اكتشف التدريب",
-        "Enquire": "استفسر الآن",
-        "Discover Coaching": "اكتشف التدريب",
-        "Start Your Journey": "ابدأ رحلتك",
-        "Meet Your Coach": "تعرّف على مدربك",
-        "Book a Lesson": "احجز حصة تدريبية",
-        "SCROLL TO EXPLORE": "مرّر لاكتشاف المزيد",
-        "ABOUT · USGTF PROFESSIONAL · DOHA": "نبذة · محترف USGTF · الدوحة",
-        "Master the Basics Master Your Game": "أتقن الأساسيات. وارتقِ بلعبتك",
-        "WAQAS ALBLOUSHI": "وقاص البلوشي",
-        "USGTF PRO": "محترف USGTF",
-        "Waqas Albloushi": "وقاص البلوشي",
-        "Waqas Albloushi is a professional golf coach and competitive player with more than 19 years in the game. He started playing in 2007 at the age of 17 and continues to represent Qatar while coaching players of all levels around Doha.": "وقاص البلوشي مدرب جولف محترف ولاعب منافس، يمتلك خبرة تتجاوز 19 عاماً في اللعبة. بدأ ممارسة الجولف عام 2007، وهو في السابعة عشرة، ويواصل تمثيل قطر وتدريب لاعبين من مختلف المستويات في الدوحة.",
-        "His approach is simple: make the game clearer. Coaching focuses on strong foundations, better technique, course strategy, and the confidence to perform, whether you’re a beginner or an experienced player.": "نهجه واضح: تبسيط اللعبة. يركز التدريب على ترسيخ الأساسيات وتحسين التقنية واستراتيجية اللعب وبناء الثقة، للمبتدئين واللاعبين أصحاب الخبرة.",
-        "Years in Golf": "عاماً في الجولف",
-        "Started 2007": "بدأ عام 2007",
-        "Professional (2021)": "محترف منذ 2021",
-        "Represents Qatar": "يمثل دولة قطر",
-        "Languages": "اللغات",
-        "COACHING": "التدريب",
-        "Practical coaching.": "تدريب عملي يصنع الفرق.",
-        "Sessions start with understanding where you are and what you want to achieve. Coaching is tailored for beginners, intermediate and advanced players.": "نبدأ بفهم مستواك وما تطمح إلى تحقيقه، ثم نصمم التدريب ليناسب المبتدئين والمتوسطين والمتقدمين.",
-        "Full Swing": "الضربة الكاملة",
-        "Grip, posture, alignment and consistency.": "القبضة والوقفة والمحاذاة وثبات الأداء.",
-        "Short Game": "اللعب القصير",
-        "Control and confidence around the green.": "تحكم وثقة أكبر حول منطقة الحفرة.",
-        "Putting": "ضربات التهديف",
-        "Touch and distance control.": "إحساس أدق وتحكم بالمسافة.",
-        "Bunker Play": "اللعب من الحواجز الرملية",
-        "Practical techniques for different situations.": "أساليب عملية للتعامل مع مختلف المواقف.",
-        "The goal is to turn better golf understanding into confident decisions and better performance.": "هدفنا أن يتحول فهمك الأفضل للجولف إلى قرارات واثقة وأداء أقوى.",
-        "THE GOAL": "الهدف",
-        "Play with": "العب",
-        "confidence.": "بثقة.",
-        "USGTF CREDENTIALS": "اعتمادات USGTF",
-        "Professional credentials": "اعتمادات احترافية",
-        "View certificate": "عرض الشهادة",
-        "VIEW": "عرض",
-        "COACHING PLAN": "خطط التدريب",
-        "Monthly Coaching Package": "باقة التدريب الشهرية",
-        "10 private golf coaching lessons each month, scheduled around your availability. Suitable for beginners, intermediate and advanced players.": "10 حصص جولف خاصة شهرياً، تُجدول بما يناسب وقتك. مناسبة للمبتدئين والمتوسطين والمتقدمين.",
-        "MONTHLY PACKAGE": "الباقة الشهرية",
-        "DOHA": "الدوحة",
-        "MONTHLY": "شهرياً",
-        "/ MONTH": "/ الشهر",
-        "10 private lessons every month": "10 حصص تدريبية خاصة كل شهر",
-        "Full swing, short game, putting, chipping and bunker play": "الضربة الكاملة واللعب القصير والتهديف والضربات القصيرة واللعب من الحواجز الرملية",
-        "Coaching tailored to your level and goals": "تدريب يناسب مستواك وأهدافك",
-        "Flexible scheduling via WhatsApp": "مواعيد مرنة عبر واتساب",
-        "Confirmation after booking and payment": "تأكيد الحجز بعد إتمام الدفع",
-        "Easy date and time changes through WhatsApp": "تعديل الموعد أو الوقت بسهولة عبر واتساب",
-        "Package automatically renews every month": "تتجدد الباقة تلقائياً كل شهر",
-        "Enquire About Coaching": "استفسر عن التدريب",
-        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
-        "Ready to commit to a full year of focused coaching?": "هل أنت مستعد لعام كامل من التدريب المركّز؟",
-        "Discover the Yearly Package": "اكتشف الباقة السنوية",
-        "PRIVATE CLIENT · ANNUAL PROGRAM": "عميل خاص · برنامج سنوي",
-        "Yearly Coaching Package": "باقة التدريب السنوية",
-        "A full year of dedicated coaching for players ready to take their game further.": "عام كامل من التدريب المخصص للاعبين المستعدين للارتقاء بمستواهم.",
-        "SAVE $3,000": "وفّر 3,000 دولار",
-        "/ YEAR": "/ السنة",
-        "One annual package": "باقة سنوية واحدة",
-        "when paid month by month": "عند الدفع شهرياً",
-        "120 private lessons": "120 حصة تدريبية خاصة",
-        "10 sessions per month": "10 حصص شهرياً",
-        "· 10 sessions per month": "· 10 حصص شهرياً",
-        "Easy date or time changes through WhatsApp": "تعديل الموعد أو الوقت بسهولة عبر واتساب",
-        "Best value for serious players": "أفضل قيمة للاعبين الجادين",
-        "Enquire About the Yearly Package": "استفسر عن الباقة السنوية",
-        "CONTACT": "تواصل",
-        "Ready to": "هل أنت مستعد",
-        "improve?": "للتطور؟",
-        "Tell Coach Waqas about your current level and what you’d like to work on. Coaching is available for all levels in QATAR.": "أخبر المدرب وقاص عن مستواك الحالي وما ترغب في تطويره. التدريب متاح لجميع المستويات في قطر.",
-        "FASTEST RESPONSE": "أسرع وسيلة للتواصل",
-        "Start a Conversation": "ابدأ محادثة",
-        "EMAIL": "البريد الإلكتروني",
-        "Send an Email": "أرسل رسالة بريدية",
-        "Waqas Albloushi Golf Coaching home": "الصفحة الرئيسية لتدريب الجولف مع وقاص البلوشي",
-        "Waqas Albloushi Golf Coaching": "تدريب الجولف مع وقاص البلوشي",
-        "PROFESSIONAL GOLF COACH": "مدرب جولف محترف",
-        "Footer navigation": "روابط التذييل",
-        "Doha, Qatar": "الدوحة، قطر",
-        "BOOK A GOLF LESSON": "احجز حصة جولف",
-        "Book via WhatsApp": "احجز عبر واتساب",
-        "© 2026 Waqas Albloushi Golf Coaching. All rights reserved.": "© 2026 تدريب الجولف مع وقاص البلوشي. جميع الحقوق محفوظة.",
-        "Certificate": "شهادة",
-        "Close certificate viewer": "إغلاق عارض الشهادات",
-        "Previous certificate": "الشهادة السابقة",
-        "Next certificate": "الشهادة التالية",
-        "Back to top": "العودة إلى الأعلى",
-        "Language selector": "اختيار اللغة",
-        "Main navigation": "التنقل الرئيسي",
-        "Open menu": "فتح القائمة",
-        "English": "الإنجليزية",
-        "Arabic": "العربية",
-        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
-        "Discover the Yearly Package": "اكتشف باقة التدريب السنوية",
-        "SAVE $3,000": "وفّر 3,000 دولار",
-        "QAR 54,600 / YEAR": "54,600 ريال قطري / السنة",
-        "USD / YEAR": "دولار / السنة",
-        "QAR / YEAR": "ريال قطري / السنة",
-        "USD": "دولار أمريكي",
-        "QAR": "ريال قطري",
-        "USD ⇄ QAR": "دولار أمريكي ⇄ ريال قطري",
-        "1 USD = 3.64 QAR": "1 دولار أمريكي = 3.64 ريال قطري",
-        "Currency converter": "محول العملات",
-        "ON THE COURSE": "في الملعب",
-        "See the game in motion.": "شاهد اللعبة في حركة.",
-        "Upload your golf coaching video here.": "ارفع فيديو تدريب الجولف هنا.",
-        "Golf coaching video": "فيديو تدريب الجولف",
-        "Play golf coaching video": "تشغيل فيديو تدريب الجولف"
+
+        "Structured coaching designed around your goals, your game, and your progress.":
+            "تدريب منظم يواكب أهدافك ومستواك وتطورك في اللعبة.",
+
+        "COACHING IN DOHA":
+            "تدريب في الدوحة",
+
+        "CONFIDENCE":
+            "الثقة",
+
+        "STARTS HERE.":
+            "تبدأ من هنا.",
+
+        "Practical guidance to help you step onto the course with greater clarity and confidence.":
+            "إرشادات عملية تساعدك على دخول الملعب بتركيز وثقة أكبر.",
+
+        "ALL LEVELS WELCOME":
+            "نرحب بجميع المستويات",
+
+        "FROM FIRST SWING":
+            "من الضربة الأولى",
+
+        "TO FINER DETAILS.":
+            "إلى أدق التفاصيل.",
+
+        "Coaching for beginners, intermediate players, and golfers looking to refine their game.":
+            "تدريب للمبتدئين والمتوسطين ولكل لاعب يسعى إلى تطوير أدائه.",
+
+        "WAQAS ALBLOUSHI · USGTF PROFESSIONAL":
+            "وقاص البلوشي · محترف USGTF",
+
+        "MAKE EVERY":
+            "اجعل كل",
+
+        "SHOT COUNT.":
+            "ضربة تصنع الفرق.",
+
+        "Develop the skills, course awareness, and confidence to play with greater intention.":
+            "طوّر مهاراتك وقراءتك للملعب وثقتك لتلعب بوعي أكبر.",
+
+        "Explore Coaching":
+            "اكتشف التدريب",
+
+        "Enquire":
+            "استفسر الآن",
+
+        "Discover Coaching":
+            "اكتشف التدريب",
+
+        "Start Your Journey":
+            "ابدأ رحلتك",
+
+        "Meet Your Coach":
+            "تعرّف على مدربك",
+
+        "Book a Lesson":
+            "احجز حصة تدريبية",
+
+        "SCROLL TO EXPLORE":
+            "مرّر لاكتشاف المزيد",
+
+        "ABOUT · USGTF PROFESSIONAL · DOHA":
+            "نبذة · محترف USGTF · الدوحة",
+
+        "Master the Basics Master Your Game":
+            "أتقن الأساسيات. وارتقِ بلعبتك",
+
+        "WAQAS ALBLOUSHI":
+            "وقاص البلوشي",
+
+        "USGTF PRO":
+            "محترف USGTF",
+
+        "Waqas Albloushi":
+            "وقاص البلوشي",
+
+        "Waqas Albloushi is a professional golf coach and competitive player with more than 19 years in the game. He started playing in 2007 at the age of 17 and continues to represent Qatar while coaching players of all levels around Doha.":
+            "وقاص البلوشي مدرب جولف محترف ولاعب منافس، يمتلك خبرة تتجاوز 19 عاماً في اللعبة. بدأ ممارسة الجولف عام 2007، وهو في السابعة عشرة، ويواصل تمثيل قطر وتدريب لاعبين من مختلف المستويات في الدوحة.",
+
+        "His approach is simple: make the game clearer. Coaching focuses on strong foundations, better technique, course strategy, and the confidence to perform, whether you’re a beginner or an experienced player.":
+            "نهجه واضح: تبسيط اللعبة. يركز التدريب على ترسيخ الأساسيات وتحسين التقنية واستراتيجية اللعب وبناء الثقة، للمبتدئين واللاعبين أصحاب الخبرة.",
+
+        "Years in Golf":
+            "عاماً في الجولف",
+
+        "Started 2007":
+            "بدأ عام 2007",
+
+        "Professional (2021)":
+            "محترف منذ 2021",
+
+        "Represents Qatar":
+            "يمثل دولة قطر",
+
+        "Languages":
+            "اللغات",
+
+        "COACHING":
+            "التدريب",
+
+        "Practical coaching.":
+            "تدريب عملي يصنع الفرق.",
+
+        "Sessions start with understanding where you are and what you want to achieve. Coaching is tailored for beginners, intermediate and advanced players.":
+            "نبدأ بفهم مستواك وما تطمح إلى تحقيقه، ثم نصمم التدريب ليناسب المبتدئين والمتوسطين والمتقدمين.",
+
+        "Full Swing":
+            "الضربة الكاملة",
+
+        "Grip, posture, alignment and consistency.":
+            "القبضة والوقفة والمحاذاة وثبات الأداء.",
+
+        "Short Game":
+            "اللعب القصير",
+
+        "Control and confidence around the green.":
+            "تحكم وثقة أكبر حول منطقة الحفرة.",
+
+        "Putting":
+            "ضربات التهديف",
+
+        "Touch and distance control.":
+            "إحساس أدق وتحكم بالمسافة.",
+
+        "Bunker Play":
+            "اللعب من الحواجز الرملية",
+
+        "Practical techniques for different situations.":
+            "أساليب عملية للتعامل مع مختلف المواقف.",
+
+        "The goal is to turn better golf understanding into confident decisions and better performance.":
+            "هدفنا أن يتحول فهمك الأفضل للجولف إلى قرارات واثقة وأداء أقوى.",
+
+        "THE GOAL":
+            "الهدف",
+
+        "Play with":
+            "العب",
+
+        "confidence.":
+            "بثقة.",
+
+        "USGTF CREDENTIALS":
+            "اعتمادات USGTF",
+
+        "Professional credentials":
+            "اعتمادات احترافية",
+
+        "View certificate":
+            "عرض الشهادة",
+
+        "VIEW":
+            "عرض",
+
+        "COACHING PLAN":
+            "خطط التدريب",
+
+        "Monthly Coaching Package":
+            "باقة التدريب الشهرية",
+
+        "10 private golf coaching lessons each month, scheduled around your availability. Suitable for beginners, intermediate and advanced players.":
+            "10 حصص جولف خاصة شهرياً، تُجدول بما يناسب وقتك. مناسبة للمبتدئين والمتوسطين والمتقدمين.",
+
+        "MONTHLY PACKAGE":
+            "الباقة الشهرية",
+
+        "DOHA":
+            "الدوحة",
+
+        "MONTHLY":
+            "شهرياً",
+
+        "/ MONTH":
+            "/ الشهر",
+
+        "10 private lessons every month":
+            "10 حصص تدريبية خاصة كل شهر",
+
+        "Full swing, short game, putting, chipping and bunker play":
+            "الضربة الكاملة واللعب القصير والتهديف والضربات القصيرة واللعب من الحواجز الرملية",
+
+        "Coaching tailored to your level and goals":
+            "تدريب يناسب مستواك وأهدافك",
+
+        "Flexible scheduling via WhatsApp":
+            "مواعيد مرنة عبر واتساب",
+
+        "Confirmation after booking and payment":
+            "تأكيد الحجز بعد إتمام الدفع",
+
+        "Easy date and time changes through WhatsApp":
+            "تعديل الموعد أو الوقت بسهولة عبر واتساب",
+
+        "Package automatically renews every month":
+            "تتجدد الباقة تلقائياً كل شهر",
+
+        "Enquire About Coaching":
+            "استفسر عن التدريب",
+
+        "YOUR GAME, ALL YEAR":
+            "لعبتك طوال العام",
+
+        "Ready to commit to a full year of focused coaching?":
+            "هل أنت مستعد لعام كامل من التدريب المركّز؟",
+
+        "Discover the Yearly Package":
+            "اكتشف الباقة السنوية",
+
+        "PRIVATE CLIENT · ANNUAL PROGRAM":
+            "عميل خاص · برنامج سنوي",
+
+        "Yearly Coaching Package":
+            "باقة التدريب السنوية",
+
+        "A full year of dedicated coaching for players ready to take their game further.":
+            "عام كامل من التدريب المخصص للاعبين المستعدين للارتقاء بمستواهم.",
+
+        "SAVE $3,000":
+            "وفّر 3,000 دولار",
+
+        "/ YEAR":
+            "/ السنة",
+
+        "One annual package":
+            "باقة سنوية واحدة",
+
+        "when paid month by month":
+            "عند الدفع شهرياً",
+
+        "120 private lessons":
+            "120 حصة تدريبية خاصة",
+
+        "10 sessions per month":
+            "10 حصص شهرياً",
+
+        "· 10 sessions per month":
+            "· 10 حصص شهرياً",
+
+        "Best value for serious players":
+            "أفضل قيمة للاعبين الجادين",
+
+        "Enquire About the Yearly Package":
+            "استفسر عن الباقة السنوية",
+
+        "CONTACT":
+            "تواصل",
+
+        "Ready to":
+            "هل أنت مستعد",
+
+        "improve?":
+            "للتطور؟",
+
+        "Tell Coach Waqas about your current level and what you’d like to work on. Coaching is available for all levels in QATAR.":
+            "أخبر المدرب وقاص عن مستواك الحالي وما ترغب في تطويره. التدريب متاح لجميع المستويات في قطر.",
+
+        "FASTEST RESPONSE":
+            "أسرع وسيلة للتواصل",
+
+        "Start a Conversation":
+            "ابدأ محادثة",
+
+        "EMAIL":
+            "البريد الإلكتروني",
+
+        "Send an Email":
+            "أرسل رسالة بريدية",
+
+        "Waqas Albloushi Golf Coaching home":
+            "الصفحة الرئيسية لتدريب الجولف مع وقاص البلوشي",
+
+        "Waqas Albloushi Golf Coaching":
+            "تدريب الجولف مع وقاص البلوشي",
+
+        "PROFESSIONAL GOLF COACH":
+            "مدرب جولف محترف",
+
+        "Footer navigation":
+            "روابط التذييل",
+
+        "Doha, Qatar":
+            "الدوحة، قطر",
+
+        "BOOK A GOLF LESSON":
+            "احجز حصة جولف",
+
+        "Book via WhatsApp":
+            "احجز عبر واتساب",
+
+        "© 2026 Waqas Albloushi Golf Coaching. All rights reserved.":
+            "© 2026 تدريب الجولف مع وقاص البلوشي. جميع الحقوق محفوظة.",
+
+        "Certificate":
+            "شهادة",
+
+        "Close certificate viewer":
+            "إغلاق عارض الشهادات",
+
+        "Previous certificate":
+            "الشهادة السابقة",
+
+        "Next certificate":
+            "الشهادة التالية",
+
+        "Back to top":
+            "العودة إلى الأعلى",
+
+        "Language selector":
+            "اختيار اللغة",
+
+        "Main navigation":
+            "التنقل الرئيسي",
+
+        "Open menu":
+            "فتح القائمة",
+
+        "English":
+            "الإنجليزية",
+
+        "Arabic":
+            "العربية",
+
+        "QAR 54,600 / YEAR":
+            "54,600 ريال قطري / السنة",
+
+        "USD / YEAR":
+            "دولار / السنة",
+
+        "QAR / YEAR":
+            "ريال قطري / السنة",
+
+        "USD":
+            "دولار أمريكي",
+
+        "QAR":
+            "ريال قطري",
+
+        "USD ⇄ QAR":
+            "دولار أمريكي ⇄ ريال قطري",
+
+        "1 USD = 3.64 QAR":
+            "1 دولار أمريكي = 3.64 ريال قطري",
+
+        "Currency converter":
+            "محول العملات",
+
+        "Currency Converter":
+            "محول العملات",
+
+        "ON THE COURSE":
+            "في الملعب",
+
+        "See the game in motion.":
+            "شاهد اللعبة في حركة.",
+
+        "A closer look at practical golf, movement, technique and play.":
+            "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب.",
+
+        "Upload your golf coaching video here.":
+            "ارفع فيديو تدريب الجولف هنا.",
+
+        "Golf coaching video":
+            "فيديو تدريب الجولف",
+
+        "Play golf coaching video":
+            "تشغيل فيديو تدريب الجولف",
+
+        "WAQAS ALBLOUSHI · GOLF COACHING · DOHA":
+            "وقاص البلوشي · تدريب الجولف · الدوحة",
+
+        "Replace the video file in assets/videos/ when your final footage is ready.":
+            "استبدل ملف الفيديو داخل assets/videos/ عند تجهيز اللقطات النهائية.",
+
+        "Your browser does not support HTML5 video.":
+            "متصفحك لا يدعم فيديو HTML5.",
+
+        "Swap USD and QAR":
+            "تبديل الدولار والريال القطري"
+
     };
 
 
@@ -319,6 +613,7 @@ const contentTranslations = {
         document.getElementById(
             "page-loader"
         );
+
     const loaderBar =
         document.getElementById(
             "loader-progress-bar"
@@ -424,248 +719,6 @@ const contentTranslations = {
             "certificate-lightbox-next"
         );
 
-    const certificateImages = [
-        "./assets/images/certificate-1.jpeg",
-        "./assets/images/certificate-2.jpeg",
-        "./assets/images/certificate-3.jpeg"
-    ];
-
-    let activeCertificateIndex = 0;
-
-
-    function certificateCounterText(index) {
-
-        return `${String(index + 1).padStart(2, "0")} / ${String(certificateImages.length).padStart(2, "0")}`;
-
-    }
-
-
-    function renderCertificates() {
-
-        if (!certificateTrack) {
-            return;
-        }
-
-        certificateTrack.innerHTML = certificateImages.map(
-            (image, index) => `
-                <button
-                    class="certificate-item certificate-item-${index + 1} reveal"
-                    type="button"
-                    data-certificate-index="${index}"
-                    aria-label="View certificate ${index + 1}"
-                >
-                    <span class="certificate-image-wrap">
-                        <img src="${image}" alt="Certificate ${index + 1}">
-                    </span>
-                    <span class="certificate-view">VIEW</span>
-                </button>
-            `
-        ).join("");
-
-        certificateTrack
-            .querySelectorAll(".certificate-item")
-            .forEach(item => {
-
-                item.addEventListener(
-                    "click",
-                    () => {
-
-                        setActiveCertificate(
-                            Number(item.dataset.certificateIndex),
-                            true
-                        );
-
-                    }
-                );
-
-            });
-
-    }
-
-
-    function setActiveCertificate(index, openViewer = false) {
-
-        activeCertificateIndex =
-            (index + certificateImages.length) %
-            certificateImages.length;
-
-        certificateTrack
-            ?.querySelectorAll(".certificate-item")
-            .forEach((item, itemIndex) => {
-
-                item.classList.toggle(
-                    "is-active",
-                    itemIndex === activeCertificateIndex
-                );
-
-                item.classList.toggle(
-                    "is-prev",
-                    itemIndex === (activeCertificateIndex - 1 + certificateImages.length) % certificateImages.length
-                );
-
-                item.classList.toggle(
-                    "is-next",
-                    itemIndex === (activeCertificateIndex + 1) % certificateImages.length
-                );
-
-            });
-
-        const counter =
-            certificateCounterText(activeCertificateIndex);
-
-        if (certificateCounter) {
-            certificateCounter.textContent = counter;
-        }
-
-        if (openViewer) {
-            openCertificateLightbox();
-        }
-
-    }
-
-
-    function openCertificateLightbox() {
-
-        if (
-            !certificateLightbox ||
-            !certificateLightboxImage
-        ) {
-            return;
-        }
-
-        certificateLightboxImage.src =
-            certificateImages[activeCertificateIndex];
-
-        certificateLightboxImage.alt =
-            `Certificate ${activeCertificateIndex + 1}`;
-
-        certificateLightboxCounter.textContent =
-            certificateCounterText(activeCertificateIndex);
-
-        certificateLightbox.classList.add("active");
-        certificateLightbox.setAttribute("aria-hidden", "false");
-        body.classList.add("lightbox-open");
-
-    }
-
-
-    function closeCertificateLightbox() {
-
-        certificateLightbox?.classList.remove("active");
-        certificateLightbox?.setAttribute("aria-hidden", "true");
-
-        if (!lightbox?.classList.contains("active")) {
-            body.classList.remove("lightbox-open");
-        }
-
-    }
-
-
-    renderCertificates();
-    setActiveCertificate(0);
-
-    document
-        .getElementById("certificate-prev")
-        ?.addEventListener(
-            "click",
-            () => setActiveCertificate(activeCertificateIndex - 1)
-        );
-
-    document
-        .getElementById("certificate-next")
-        ?.addEventListener(
-            "click",
-            () => setActiveCertificate(activeCertificateIndex + 1)
-        );
-
-    let certificateTouchStartX = 0;
-
-    certificateTrack?.addEventListener(
-        "touchstart",
-        event => {
-            certificateTouchStartX = event.changedTouches[0].screenX;
-        },
-        { passive: true }
-    );
-
-    certificateTrack?.addEventListener(
-        "touchend",
-        event => {
-
-            const distance =
-                event.changedTouches[0].screenX -
-                certificateTouchStartX;
-
-            if (Math.abs(distance) < 40) {
-                return;
-            }
-
-            setActiveCertificate(
-                activeCertificateIndex +
-                (distance < 0 ? 1 : -1)
-            );
-
-        },
-        { passive: true }
-    );
-
-    certificateLightboxClose?.addEventListener(
-        "click",
-        closeCertificateLightbox
-    );
-
-    certificateLightboxPrev?.addEventListener(
-        "click",
-        () => {
-            setActiveCertificate(activeCertificateIndex - 1);
-            openCertificateLightbox();
-        }
-    );
-
-    certificateLightboxNext?.addEventListener(
-        "click",
-        () => {
-            setActiveCertificate(activeCertificateIndex + 1);
-            openCertificateLightbox();
-        }
-    );
-
-    certificateLightbox?.addEventListener(
-        "click",
-        event => {
-
-            if (event.target === certificateLightbox) {
-                closeCertificateLightbox();
-            }
-
-        }
-    );
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (!certificateLightbox?.classList.contains("active")) {
-                return;
-            }
-
-            if (event.key === "ArrowLeft") {
-                setActiveCertificate(activeCertificateIndex - 1);
-                openCertificateLightbox();
-            }
-
-            if (event.key === "ArrowRight") {
-                setActiveCertificate(activeCertificateIndex + 1);
-                openCertificateLightbox();
-            }
-
-            if (event.key === "Escape") {
-                closeCertificateLightbox();
-            }
-
-        }
-    );
-
     const slides =
         document.querySelectorAll(
             ".hero-slide"
@@ -688,32 +741,421 @@ const contentTranslations = {
 
 
     /* =====================================================
+       CERTIFICATES
+    ===================================================== */
+
+    const certificateImages = [
+        "./assets/images/certificate-1.jpeg",
+        "./assets/images/certificate-2.jpeg",
+        "./assets/images/certificate-3.jpeg"
+    ];
+
+    let activeCertificateIndex = 0;
+
+
+    function certificateCounterText(index) {
+
+        return `${String(index + 1).padStart(2, "0")} / ${String(certificateImages.length).padStart(2, "0")}`;
+
+    }
+
+
+    function renderCertificates() {
+
+        if (!certificateTrack) {
+            return;
+        }
+
+        certificateTrack.innerHTML =
+            certificateImages.map(
+                (image, index) => `
+                    <button
+                        class="certificate-item certificate-item-${index + 1} reveal"
+                        type="button"
+                        data-certificate-index="${index}"
+                        aria-label="View certificate ${index + 1}"
+                    >
+                        <span class="certificate-image-wrap">
+                            <img
+                                src="${image}"
+                                alt="Certificate ${index + 1}"
+                            >
+                        </span>
+
+                        <span class="certificate-view">
+                            VIEW
+                        </span>
+                    </button>
+                `
+            ).join("");
+
+        certificateTrack
+            .querySelectorAll(".certificate-item")
+            .forEach(item => {
+
+                item.addEventListener(
+                    "click",
+                    () => {
+
+                        setActiveCertificate(
+                            Number(
+                                item.dataset.certificateIndex
+                            ),
+                            true
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    function setActiveCertificate(
+        index,
+        openViewer = false
+    ) {
+
+        activeCertificateIndex =
+            (
+                index +
+                certificateImages.length
+            ) %
+            certificateImages.length;
+
+        certificateTrack
+            ?.querySelectorAll(
+                ".certificate-item"
+            )
+            .forEach(
+                (item, itemIndex) => {
+
+                    item.classList.toggle(
+                        "is-active",
+                        itemIndex ===
+                            activeCertificateIndex
+                    );
+
+                    item.classList.toggle(
+                        "is-prev",
+                        itemIndex ===
+                            (
+                                activeCertificateIndex -
+                                1 +
+                                certificateImages.length
+                            ) %
+                            certificateImages.length
+                    );
+
+                    item.classList.toggle(
+                        "is-next",
+                        itemIndex ===
+                            (
+                                activeCertificateIndex +
+                                1
+                            ) %
+                            certificateImages.length
+                    );
+
+                }
+            );
+
+        const counter =
+            certificateCounterText(
+                activeCertificateIndex
+            );
+
+        if (certificateCounter) {
+
+            certificateCounter.textContent =
+                counter;
+
+        }
+
+        if (openViewer) {
+
+            openCertificateLightbox();
+
+        }
+
+    }
+
+
+    function openCertificateLightbox() {
+
+        if (
+            !certificateLightbox ||
+            !certificateLightboxImage
+        ) {
+            return;
+        }
+
+        certificateLightboxImage.src =
+            certificateImages[
+                activeCertificateIndex
+            ];
+
+        certificateLightboxImage.alt =
+            `Certificate ${activeCertificateIndex + 1}`;
+
+        if (certificateLightboxCounter) {
+
+            certificateLightboxCounter.textContent =
+                certificateCounterText(
+                    activeCertificateIndex
+                );
+
+        }
+
+        certificateLightbox.classList.add(
+            "active"
+        );
+
+        certificateLightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        body.classList.add(
+            "lightbox-open"
+        );
+
+    }
+
+
+    function closeCertificateLightbox() {
+
+        certificateLightbox?.classList.remove(
+            "active"
+        );
+
+        certificateLightbox?.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        if (
+            !lightbox?.classList.contains(
+                "active"
+            )
+        ) {
+
+            body.classList.remove(
+                "lightbox-open"
+            );
+
+        }
+
+    }
+
+
+    renderCertificates();
+    setActiveCertificate(0);
+
+
+    document
+        .getElementById("certificate-prev")
+        ?.addEventListener(
+            "click",
+            () =>
+                setActiveCertificate(
+                    activeCertificateIndex - 1
+                )
+        );
+
+
+    document
+        .getElementById("certificate-next")
+        ?.addEventListener(
+            "click",
+            () =>
+                setActiveCertificate(
+                    activeCertificateIndex + 1
+                )
+        );
+
+
+    let certificateTouchStartX = 0;
+
+
+    certificateTrack?.addEventListener(
+        "touchstart",
+        event => {
+
+            certificateTouchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    certificateTrack?.addEventListener(
+        "touchend",
+        event => {
+
+            const distance =
+                event.changedTouches[0].screenX -
+                certificateTouchStartX;
+
+            if (
+                Math.abs(distance) < 40
+            ) {
+                return;
+            }
+
+            setActiveCertificate(
+                activeCertificateIndex +
+                (
+                    distance < 0
+                        ? 1
+                        : -1
+                )
+            );
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    certificateLightboxClose?.addEventListener(
+        "click",
+        closeCertificateLightbox
+    );
+
+
+    certificateLightboxPrev?.addEventListener(
+        "click",
+        () => {
+
+            setActiveCertificate(
+                activeCertificateIndex - 1
+            );
+
+            openCertificateLightbox();
+
+        }
+    );
+
+
+    certificateLightboxNext?.addEventListener(
+        "click",
+        () => {
+
+            setActiveCertificate(
+                activeCertificateIndex + 1
+            );
+
+            openCertificateLightbox();
+
+        }
+    );
+
+
+    certificateLightbox?.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target ===
+                certificateLightbox
+            ) {
+
+                closeCertificateLightbox();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                !certificateLightbox?.classList.contains(
+                    "active"
+                )
+            ) {
+                return;
+            }
+
+            if (
+                event.key === "ArrowLeft"
+            ) {
+
+                setActiveCertificate(
+                    activeCertificateIndex - 1
+                );
+
+                openCertificateLightbox();
+
+            }
+
+            if (
+                event.key === "ArrowRight"
+            ) {
+
+                setActiveCertificate(
+                    activeCertificateIndex + 1
+                );
+
+                openCertificateLightbox();
+
+            }
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeCertificateLightbox();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
        STARTUP LOADER
     ===================================================== */
 
     let progress = 0;
 
     const fakeLoader =
-        setInterval(() => {
+        setInterval(
+            () => {
 
-            progress +=
-                Math.floor(
-                    Math.random() * 5
-                ) + 1;
+                progress +=
+                    Math.floor(
+                        Math.random() * 5
+                    ) + 1;
 
-            if (progress >= 91) {
+                if (
+                    progress >= 91
+                ) {
 
-                progress = 91;
+                    progress = 91;
 
-                clearInterval(
-                    fakeLoader
+                    clearInterval(
+                        fakeLoader
+                    );
+
+                }
+
+                updateLoader(
+                    progress
                 );
 
-            }
-
-            updateLoader(progress);
-
-        }, 75);
+            },
+            75
+        );
 
 
     function updateLoader(value) {
@@ -746,63 +1188,67 @@ const contentTranslations = {
             let finalProgress =
                 progress;
 
-
             const finish =
-                setInterval(() => {
+                setInterval(
+                    () => {
 
-                    finalProgress += 2;
+                        finalProgress += 2;
 
-                    if (
-                        finalProgress >= 100
-                    ) {
+                        if (
+                            finalProgress >= 100
+                        ) {
 
-                        finalProgress = 100;
+                            finalProgress = 100;
 
-                        updateLoader(
-                            finalProgress
-                        );
-
-                        clearInterval(
-                            finish
-                        );
-
-
-                        setTimeout(() => {
-
-                            body.classList.add(
-                                "page-ready"
+                            updateLoader(
+                                finalProgress
                             );
 
-                            /* Logo and loading screen share one continuous duration.
-                               The separate logo-transition stage has been removed. */
+                            clearInterval(
+                                finish
+                            );
 
-                            setTimeout(() => {
+                            setTimeout(
+                                () => {
 
-                                if (loader) {
-
-                                    loader.classList.add(
-                                        "loader-hidden"
+                                    body.classList.add(
+                                        "page-ready"
                                     );
 
-                                }
+                                    setTimeout(
+                                        () => {
 
-                                body.classList.remove(
-                                    "loading"
-                                );
+                                            if (loader) {
 
-                            }, 2300);
+                                                loader.classList.add(
+                                                    "loader-hidden"
+                                                );
 
-                        }, 450);
+                                            }
 
-                    } else {
+                                            body.classList.remove(
+                                                "loading"
+                                            );
 
-                        updateLoader(
-                            finalProgress
-                        );
+                                        },
+                                        2300
+                                    );
 
-                    }
+                                },
+                                450
+                            );
 
-                }, 25);
+                        } else {
+
+                            updateLoader(
+                                finalProgress
+                            );
+
+                        }
+
+                    },
+                    25
+                );
 
         }
     );
@@ -823,24 +1269,17 @@ const contentTranslations = {
             !heroSection ||
             window.innerWidth > 800
         ) {
-
             return;
-
         }
-
 
         const image =
             slides[index]?.querySelector(
                 "img"
             );
 
-
         if (!image) {
-
             return;
-
         }
-
 
         const applyRatio = () => {
 
@@ -855,7 +1294,6 @@ const contentTranslations = {
             }
 
         };
-
 
         if (image.complete) {
 
@@ -879,21 +1317,15 @@ const contentTranslations = {
     function showSlide(index) {
 
         if (!slides.length) {
-
             return;
-
         }
 
-
-        if (
-            index < 0
-        ) {
+        if (index < 0) {
 
             index =
                 slides.length - 1;
 
         }
-
 
         if (
             index >= slides.length
@@ -902,7 +1334,6 @@ const contentTranslations = {
             index = 0;
 
         }
-
 
         slides.forEach(
             (slide, i) => {
@@ -915,7 +1346,6 @@ const contentTranslations = {
             }
         );
 
-
         dots.forEach(
             (dot, i) => {
 
@@ -926,7 +1356,6 @@ const contentTranslations = {
 
             }
         );
-
 
         currentSlide =
             index;
@@ -950,9 +1379,9 @@ const contentTranslations = {
 
         }
 
-
-        syncMobileHeroRatio(index);
-
+        syncMobileHeroRatio(
+            index
+        );
 
         if (heroCurrent) {
 
@@ -961,7 +1390,6 @@ const contentTranslations = {
                     .padStart(2, "0");
 
         }
-
 
         animateHeroText();
 
@@ -990,8 +1418,9 @@ const contentTranslations = {
 
         stopSlider();
 
-
-        if (slides.length > 1) {
+        if (
+            slides.length > 1
+        ) {
 
             sliderTimer =
                 setInterval(
@@ -1026,21 +1455,15 @@ const contentTranslations = {
                 "hero-title"
             );
 
-
         if (!title) {
-
             return;
-
         }
-
 
         title.classList.remove(
             "hero-title-refresh"
         );
 
-
         void title.offsetWidth;
-
 
         title.classList.add(
             "hero-title-refresh"
@@ -1061,8 +1484,9 @@ const contentTranslations = {
                             dot.dataset.slideTo
                         );
 
-
-                    showSlide(index);
+                    showSlide(
+                        index
+                    );
 
                     startSlider();
 
@@ -1081,74 +1505,116 @@ const contentTranslations = {
 
     if (heroSection) {
 
-        heroSection.style.touchAction = "pan-y";
+        heroSection.style.touchAction =
+            "pan-y";
 
         heroSection.addEventListener(
             "pointerdown",
             event => {
 
-                if (event.pointerType === "mouse" && event.button !== 0) {
+                if (
+                    event.pointerType === "mouse" &&
+                    event.button !== 0
+                ) {
                     return;
                 }
 
-                heroPointerStartX = event.clientX;
-                heroPointerStartY = event.clientY;
-                heroPointerActive = true;
-                heroSection.setPointerCapture?.(event.pointerId);
+                heroPointerStartX =
+                    event.clientX;
+
+                heroPointerStartY =
+                    event.clientY;
+
+                heroPointerActive =
+                    true;
+
+                heroSection.setPointerCapture?.(
+                    event.pointerId
+                );
+
                 stopSlider();
 
             }
         );
 
+
         heroSection.addEventListener(
             "pointerup",
             event => {
 
-                if (!heroPointerActive) {
+                if (
+                    !heroPointerActive
+                ) {
                     return;
                 }
 
-                const distanceX = event.clientX - heroPointerStartX;
-                const distanceY = event.clientY - heroPointerStartY;
+                const distanceX =
+                    event.clientX -
+                    heroPointerStartX;
 
-                heroPointerActive = false;
+                const distanceY =
+                    event.clientY -
+                    heroPointerStartY;
+
+                heroPointerActive =
+                    false;
 
                 if (
                     Math.abs(distanceX) >= 45 &&
-                    Math.abs(distanceX) > Math.abs(distanceY)
+                    Math.abs(distanceX) >
+                        Math.abs(distanceY)
                 ) {
-                    heroSuppressClick = true;
 
-                    if (distanceX < 0) {
+                    heroSuppressClick =
+                        true;
+
+                    if (
+                        distanceX < 0
+                    ) {
+
                         nextSlide();
+
                     } else {
+
                         previousSlide();
+
                     }
+
                 }
 
                 startSlider();
 
             }
         );
+
 
         heroSection.addEventListener(
             "pointercancel",
             () => {
 
-                heroPointerActive = false;
+                heroPointerActive =
+                    false;
+
                 startSlider();
 
             }
         );
 
+
         heroSection.addEventListener(
             "click",
             event => {
 
-                if (heroSuppressClick) {
+                if (
+                    heroSuppressClick
+                ) {
+
                     event.preventDefault();
                     event.stopPropagation();
-                    heroSuppressClick = false;
+
+                    heroSuppressClick =
+                        false;
+
                 }
 
             },
@@ -1159,7 +1625,6 @@ const contentTranslations = {
 
 
     showSlide(0);
-
     startSlider();
 
 
@@ -1194,11 +1659,8 @@ const contentTranslations = {
     function updateHeader() {
 
         if (!header) {
-
             return;
-
         }
-
 
         if (
             window.scrollY > 50
@@ -1227,7 +1689,6 @@ const contentTranslations = {
         }
     );
 
-
     updateHeader();
 
 
@@ -1238,27 +1699,21 @@ const contentTranslations = {
     function openMenu() {
 
         if (!mobileMenu) {
-
             return;
-
         }
-
 
         mobileMenu.classList.add(
             "active"
         );
 
-
         mobileButton?.classList.add(
             "active"
         );
-
 
         mobileButton?.setAttribute(
             "aria-expanded",
             "true"
         );
-
 
         body.classList.add(
             "menu-open"
@@ -1270,27 +1725,21 @@ const contentTranslations = {
     function closeMenu() {
 
         if (!mobileMenu) {
-
             return;
-
         }
-
 
         mobileMenu.classList.remove(
             "active"
         );
 
-
         mobileButton?.classList.remove(
             "active"
         );
-
 
         mobileButton?.setAttribute(
             "aria-expanded",
             "false"
         );
-
 
         body.classList.remove(
             "menu-open"
@@ -1348,8 +1797,8 @@ const contentTranslations = {
             ) {
 
                 closeMenu();
-
                 closeLightbox();
+                closeCertificateLightbox();
 
             }
 
@@ -1358,208 +1807,643 @@ const contentTranslations = {
 
 
     /* =====================================================
-       WHATSAPP
+       LANGUAGE SYSTEM
     ===================================================== */
 
-    const languageToggle = document.getElementById("language-toggle");
-    const langButtons = document.querySelectorAll(".lang-option");
-    const rtlLanguages = ["ar"];
-    const originalText = new WeakMap();
-    const originalAttributes = new WeakMap();
-    const textTranslations = Object.fromEntries(
-        Object.entries(contentTranslations).map(([source, target]) => [
-            source.trim().replace(/\s+/g, " "),
-            target
-        ])
+    const languageToggle =
+        document.getElementById(
+            "language-toggle"
+        );
+
+    const langButtons =
+        document.querySelectorAll(
+            ".lang-option"
+        );
+
+    const rtlLanguages = [
+        "ar"
+    ];
+
+    const originalText =
+        new WeakMap();
+
+    const originalAttributes =
+        new WeakMap();
+
+
+    const textTranslations =
+        Object.fromEntries(
+            Object.entries(
+                contentTranslations
+            ).map(
+                ([source, target]) => [
+                    source
+                        .trim()
+                        .replace(/\s+/g, " "),
+                    target
+                ]
+            )
+        );
+
+
+    Object.entries(
+        translations.ar
+    ).forEach(
+        ([key, value]) => {
+
+            const english =
+                translations.en[key];
+
+            if (english) {
+
+                textTranslations[english] =
+                    value;
+
+            }
+
+        }
     );
 
-    Object.entries(translations.ar).forEach(([key, value]) => {
-        const english = translations.en[key];
-        if (english) {
-            textTranslations[english] = value;
-        }
-    });
 
     const attributeTranslations = {
-        "Waqas Golf": "جولف مع وقاص",
-        "Golf coaching in Qatar": "تدريب الجولف في قطر",
-        "Professional golf instruction": "تعليم احترافي للجولف",
-        "Golf player on course": "لاعب جولف في الملعب",
-        "Golf course in Doha": "ملعب جولف في الدوحة",
-        "Golfer making a confident golf shot": "لاعب جولف ينفذ ضربة بثقة",
-        "Professional golf coaching session": "حصة تدريب جولف احترافية",
-        "Waqas Albloushi golf professional": "محترف الجولف وقاص البلوشي",
-        "Waqas coaching a golf player": "وقاص يدرب لاعب جولف",
-        "Show slide 1": "عرض الشريحة 1",
-        "Show slide 2": "عرض الشريحة 2",
-        "Show slide 3": "عرض الشريحة 3",
-        "Show slide 4": "عرض الشريحة 4",
-        "Show slide 5": "عرض الشريحة 5",
-        "Show slide 6": "عرض الشريحة 6",
-        "Close yearly coaching package": "إغلاق باقة التدريب السنوية",
-        "Close certificate viewer": "إغلاق عارض الشهادات",
-        "Previous certificate": "الشهادة السابقة",
-        "Next certificate": "الشهادة التالية",
-        "Back to top": "العودة إلى الأعلى",
-        "Language selector": "اختيار اللغة",
-        "Main navigation": "التنقل الرئيسي",
-        "Footer navigation": "روابط التذييل",
-        "Open menu": "فتح القائمة",
-        "English": "الإنجليزية",
-        "Arabic": "العربية",
-        "YOUR GAME, ALL YEAR": "لعبتك طوال العام",
-        "Discover the Yearly Package": "اكتشف باقة التدريب السنوية",
-        "SAVE $3,000": "وفّر 3,000 دولار",
-        "QAR 54,600 / YEAR": "54,600 ريال قطري / السنة",
-        "USD / YEAR": "دولار / السنة",
-        "QAR / YEAR": "ريال قطري / السنة",
-        "USD": "دولار أمريكي",
-        "QAR": "ريال قطري",
-        "USD ⇄ QAR": "دولار أمريكي ⇄ ريال قطري",
-        "1 USD = 3.64 QAR": "1 دولار أمريكي = 3.64 ريال قطري",
-        "Currency converter": "محول العملات",
-        "ON THE COURSE": "في الملعب",
-        "See the game in motion.": "شاهد اللعبة في حركة.",
-        "Upload your golf coaching video here.": "ارفع فيديو تدريب الجولف هنا.",
-        "Golf coaching video": "فيديو تدريب الجولف",
-        "Play golf coaching video": "تشغيل فيديو تدريب الجولف"
+
+        "Waqas Golf":
+            "جولف مع وقاص",
+
+        "Golf coaching in Qatar":
+            "تدريب الجولف في قطر",
+
+        "Professional golf instruction":
+            "تعليم احترافي للجولف",
+
+        "Golf player on course":
+            "لاعب جولف في الملعب",
+
+        "Golf course in Doha":
+            "ملعب جولف في الدوحة",
+
+        "Golfer making a confident golf shot":
+            "لاعب جولف ينفذ ضربة بثقة",
+
+        "Professional golf coaching session":
+            "حصة تدريب جولف احترافية",
+
+        "Waqas Albloushi golf professional":
+            "محترف الجولف وقاص البلوشي",
+
+        "Waqas coaching a golf player":
+            "وقاص يدرب لاعب جولف",
+
+        "Show slide 1":
+            "عرض الشريحة 1",
+
+        "Show slide 2":
+            "عرض الشريحة 2",
+
+        "Show slide 3":
+            "عرض الشريحة 3",
+
+        "Show slide 4":
+            "عرض الشريحة 4",
+
+        "Show slide 5":
+            "عرض الشريحة 5",
+
+        "Show slide 6":
+            "عرض الشريحة 6",
+
+        "Close yearly coaching package":
+            "إغلاق باقة التدريب السنوية",
+
+        "Close certificate viewer":
+            "إغلاق عارض الشهادات",
+
+        "Previous certificate":
+            "الشهادة السابقة",
+
+        "Next certificate":
+            "الشهادة التالية",
+
+        "Back to top":
+            "العودة إلى الأعلى",
+
+        "Language selector":
+            "اختيار اللغة",
+
+        "Main navigation":
+            "التنقل الرئيسي",
+
+        "Footer navigation":
+            "روابط التذييل",
+
+        "Open menu":
+            "فتح القائمة",
+
+        "English":
+            "الإنجليزية",
+
+        "Arabic":
+            "العربية",
+
+        "YOUR GAME, ALL YEAR":
+            "لعبتك طوال العام",
+
+        "Discover the Yearly Package":
+            "اكتشف باقة التدريب السنوية",
+
+        "SAVE $3,000":
+            "وفّر 3,000 دولار",
+
+        "QAR 54,600 / YEAR":
+            "54,600 ريال قطري / السنة",
+
+        "USD / YEAR":
+            "دولار / السنة",
+
+        "QAR / YEAR":
+            "ريال قطري / السنة",
+
+        "USD":
+            "دولار أمريكي",
+
+        "QAR":
+            "ريال قطري",
+
+        "USD ⇄ QAR":
+            "دولار أمريكي ⇄ ريال قطري",
+
+        "1 USD = 3.64 QAR":
+            "1 دولار أمريكي = 3.64 ريال قطري",
+
+        "Currency converter":
+            "محول العملات",
+
+        "Currency Converter":
+            "محول العملات",
+
+        "ON THE COURSE":
+            "في الملعب",
+
+        "See the game in motion.":
+            "شاهد اللعبة في حركة.",
+
+        "A closer look at practical golf, movement, technique and play.":
+            "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب.",
+
+        "Upload your golf coaching video here.":
+            "ارفع فيديو تدريب الجولف هنا.",
+
+        "Golf coaching video":
+            "فيديو تدريب الجولف",
+
+        "Play golf coaching video":
+            "تشغيل فيديو تدريب الجولف"
+
     };
 
-    function translatedWhatsappUrl(language, annual = false) {
-        const message = language === "ar"
-            ? annual
-                ? "مرحباً وقاص، أود الاستفسار عن باقة التدريب السنوية."
-                : "مرحباً وقاص، أود الاستفسار عن تدريب الجولف في قطر."
-            : annual
-                ? "Hello Waqas, I am interested in the Yearly Coaching Package."
-                : SETTINGS.whatsappMessage;
+
+    function translatedWhatsappUrl(
+        language,
+        annual = false
+    ) {
+
+        const message =
+            language === "ar"
+
+                ? annual
+
+                    ? "مرحباً وقاص، أود الاستفسار عن باقة التدريب السنوية."
+
+                    : "مرحباً وقاص، أود الاستفسار عن تدريب الجولف في قطر."
+
+                : annual
+
+                    ? "Hello Waqas, I am interested in the Yearly Coaching Package."
+
+                    : SETTINGS.whatsappMessage;
+
 
         return `https://wa.me/${SETTINGS.whatsapp}?text=${encodeURIComponent(message)}`;
+
     }
 
-    Object.assign(textTranslations, extraTranslations);
 
     function applyLanguage(language) {
-        const activeLanguage = translations[language] || translations.en;
-        const html = document.documentElement;
-        const isArabic = language === "ar";
 
-        html.lang = language;
-        html.dir = rtlLanguages.includes(language) ? "rtl" : "ltr";
+        const activeLanguage =
+            translations[language] ||
+            translations.en;
 
-        const walker = document.createTreeWalker(
-            document.body,
-            NodeFilter.SHOW_TEXT
+        const html =
+            document.documentElement;
+
+        const isArabic =
+            language === "ar";
+
+
+        html.lang =
+            language;
+
+        html.dir =
+            rtlLanguages.includes(
+                language
+            )
+                ? "rtl"
+                : "ltr";
+
+
+        const walker =
+            document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT
+            );
+
+
+        while (
+            walker.nextNode()
+        ) {
+
+            const node =
+                walker.currentNode;
+
+            const parent =
+                node.parentElement;
+
+
+            if (
+                !parent ||
+                parent.closest(
+                    "script, style, noscript"
+                )
+            ) {
+                continue;
+            }
+
+
+            if (
+                !originalText.has(node)
+            ) {
+
+                originalText.set(
+                    node,
+                    node.nodeValue
+                );
+
+            }
+
+
+            const source =
+                originalText.get(node);
+
+            const trimmed =
+                source
+                    .trim()
+                    .replace(
+                        /\s+/g,
+                        " "
+                    );
+
+
+            /*
+             * FIRST:
+             * Check data-i18n.
+             *
+             * This fixes elements such as:
+             *
+             * <p data-i18n="videoDesc">
+             *
+             */
+
+            const i18nElement =
+                parent.closest(
+                    "[data-i18n]"
+                );
+
+            const i18nKey =
+                i18nElement?.dataset.i18n;
+
+
+            let translation = null;
+
+
+            if (
+                i18nKey &&
+                activeLanguage[i18nKey]
+            ) {
+
+                translation =
+                    activeLanguage[i18nKey];
+
+            } else {
+
+                translation =
+                    textTranslations[
+                        trimmed
+                    ];
+
+            }
+
+
+            if (
+                !trimmed ||
+                !translation
+            ) {
+                continue;
+            }
+
+
+            const leading =
+                source.match(
+                    /^\s*/
+                )[0];
+
+            const trailing =
+                source.match(
+                    /\s*$/
+                )[0];
+
+
+            node.nodeValue =
+                isArabic
+                    ? `${leading}${translation}${trailing}`
+                    : source;
+
+        }
+
+
+        /*
+         * Translate attributes
+         */
+
+        document.querySelectorAll(
+            "[aria-label], [alt], [title], [placeholder]"
+        ).forEach(
+            element => {
+
+                const attributes = [
+                    "aria-label",
+                    "alt",
+                    "title",
+                    "placeholder"
+                ];
+
+
+                attributes.forEach(
+                    attribute => {
+
+                        if (
+                            !element.hasAttribute(
+                                attribute
+                            )
+                        ) {
+                            return;
+                        }
+
+
+                        let sources =
+                            originalAttributes.get(
+                                element
+                            );
+
+
+                        if (!sources) {
+
+                            sources = {};
+
+                            originalAttributes.set(
+                                element,
+                                sources
+                            );
+
+                        }
+
+
+                        if (
+                            !(attribute in sources)
+                        ) {
+
+                            sources[attribute] =
+                                element.getAttribute(
+                                    attribute
+                                );
+
+                        }
+
+
+                        const source =
+                            sources[attribute];
+
+
+                        const translation =
+                            attributeTranslations[
+                                source
+                            ] ||
+                            textTranslations[
+                                source
+                            ];
+
+
+                        if (translation) {
+
+                            element.setAttribute(
+                                attribute,
+                                isArabic
+                                    ? translation
+                                    : source
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
         );
 
-        while (walker.nextNode()) {
-            const node = walker.currentNode;
-            const parent = node.parentElement;
-            if (!parent || parent.closest("script, style, noscript")) {
-                continue;
+
+        /*
+         * Language buttons
+         */
+
+        document.querySelectorAll(
+            ".lang-option"
+        ).forEach(
+            button => {
+
+                const isActive =
+                    button.dataset.lang ===
+                    language;
+
+                button.classList.toggle(
+                    "active",
+                    isActive
+                );
+
+                button.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+
             }
+        );
 
-            if (!originalText.has(node)) {
-                originalText.set(node, node.nodeValue);
-            }
 
-            const source = originalText.get(node);
-            const trimmed = source.trim().replace(/\s+/g, " ");
-            const translation = textTranslations[trimmed];
-            if (!trimmed || !translation) {
-                continue;
-            }
+        const langLabel =
+            document.getElementById(
+                "language-label"
+            );
 
-            const leading = source.match(/^\s*/)[0];
-            const trailing = source.match(/\s*$/)[0];
-            node.nodeValue = isArabic
-                ? `${leading}${translation}${trailing}`
-                : source;
-        }
 
-        document.querySelectorAll("[aria-label], [alt], [title], [placeholder]").forEach(element => {
-            const attributes = ["aria-label", "alt", "title", "placeholder"];
-            attributes.forEach(attribute => {
-                if (!element.hasAttribute(attribute)) {
-                    return;
-                }
-
-                let sources = originalAttributes.get(element);
-                if (!sources) {
-                    sources = {};
-                    originalAttributes.set(element, sources);
-                }
-                if (!(attribute in sources)) {
-                    sources[attribute] = element.getAttribute(attribute);
-                }
-
-                const source = sources[attribute];
-                const translation = attributeTranslations[source] || textTranslations[source];
-                if (translation) {
-                    element.setAttribute(attribute, isArabic ? translation : source);
-                }
-            });
-        });
-
-        document.querySelectorAll(".lang-option").forEach(button => {
-            const isActive = button.dataset.lang === language;
-            button.classList.toggle("active", isActive);
-            button.setAttribute("aria-pressed", String(isActive));
-        });
-
-        const langLabel = document.getElementById("language-label");
         if (langLabel) {
-            langLabel.textContent = language === "ar" ? "AR" : "EN";
+
+            langLabel.textContent =
+                language === "ar"
+                    ? "AR"
+                    : "EN";
+
         }
 
-        document.body.classList.toggle("rtl-mode", isArabic);
-        document.body.classList.toggle("ltr-mode", !isArabic);
 
-        document.title = isArabic
-            ? "وقاص البلوشي | مدرب جولف في الدوحة"
-            : "Waqas Albloushi | Golf Coach in Doha";
-        document.querySelector('meta[name="description"]')?.setAttribute(
+        body.classList.toggle(
+            "rtl-mode",
+            isArabic
+        );
+
+        body.classList.toggle(
+            "ltr-mode",
+            !isArabic
+        );
+
+
+        /*
+         * SEO
+         */
+
+        document.title =
+            isArabic
+                ? "وقاص البلوشي | مدرب جولف في الدوحة"
+                : "Waqas Albloushi | Golf Coach in Doha";
+
+
+        document.querySelector(
+            'meta[name="description"]'
+        )?.setAttribute(
             "content",
             isArabic
+
                 ? "وقاص البلوشي مدرب جولف محترف ولاعب منافس في الدوحة، قطر. محترف USGTF بخبرة تتجاوز 19 عاماً، يقدم تدريباً عملياً لجميع المستويات."
+
                 : "Waqas Albloushi is a professional golf coach and competitive player in Doha, Qatar. USGTF Professional with 19+ years in golf, offering practical coaching for beginners, intermediate and advanced players."
         );
-        document.querySelector('meta[property="og:title"]')?.setAttribute(
+
+
+        document.querySelector(
+            'meta[property="og:title"]'
+        )?.setAttribute(
             "content",
+
             isArabic
                 ? "وقاص البلوشي | تدريب الجولف في قطر"
                 : "Waqas Albloushi | Golf Coaching in Qatar"
         );
-        document.querySelector('meta[property="og:description"]')?.setAttribute(
+
+
+        document.querySelector(
+            'meta[property="og:description"]'
+        )?.setAttribute(
             "content",
+
             isArabic
+
                 ? "تدريب جولف احترافي في قطر مع وقاص البلوشي، محترف USGTF ولاعب منافس بخبرة تتجاوز 19 عاماً."
+
                 : "Professional golf coaching in Qatar by Waqas Albloushi, a USGTF Professional and competitive player with 19+ years in golf."
         );
 
-        document.querySelectorAll(".whatsapp-link").forEach(link => {
-            link.href = translatedWhatsappUrl(language);
-        });
-        const yearlyEnquire = document.querySelector(".yearly-package-enquire");
+
+        /*
+         * WhatsApp links
+         */
+
+        document.querySelectorAll(
+            ".whatsapp-link"
+        ).forEach(
+            link => {
+
+                link.href =
+                    translatedWhatsappUrl(
+                        language
+                    );
+
+            }
+        );
+
+
+        const yearlyEnquire =
+            document.querySelector(
+                ".yearly-package-enquire"
+            );
+
+
         if (yearlyEnquire) {
-            yearlyEnquire.href = translatedWhatsappUrl(language, true);
+
+            yearlyEnquire.href =
+                translatedWhatsappUrl(
+                    language,
+                    true
+                );
+
         }
+
     }
 
-    langButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            applyLanguage(button.dataset.lang);
-            localStorage.setItem("preferred-language", button.dataset.lang);
-        });
-    });
 
-    let savedLanguage = "en";
+    langButtons.forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    applyLanguage(
+                        button.dataset.lang
+                    );
+
+                    localStorage.setItem(
+                        "preferred-language",
+                        button.dataset.lang
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    let savedLanguage =
+        "en";
+
+
     try {
-        savedLanguage = localStorage.getItem("preferred-language") || "en";
+
+        savedLanguage =
+            localStorage.getItem(
+                "preferred-language"
+            ) || "en";
+
     } catch (error) {
-        savedLanguage = "en";
+
+        savedLanguage =
+            "en";
+
     }
-    applyLanguage(savedLanguage);
+
+
+    applyLanguage(
+        savedLanguage
+    );
+
 
     document.querySelectorAll(
         ".whatsapp-link"
@@ -1575,45 +2459,77 @@ const contentTranslations = {
         }
     );
 
+
+    /* =====================================================
+       YEARLY PACKAGE DIALOG
+    ===================================================== */
+
     const yearlyPackageDialog =
-        document.getElementById("yearly-package-dialog");
+        document.getElementById(
+            "yearly-package-dialog"
+        );
 
     const yearlyPackageOpen =
-        document.getElementById("yearly-package-open");
+        document.getElementById(
+            "yearly-package-open"
+        );
 
     const yearlyPackageClose =
-        document.getElementById("yearly-package-close");
+        document.getElementById(
+            "yearly-package-close"
+        );
+
 
     yearlyPackageOpen?.addEventListener(
         "click",
         () => {
+
             if (
-                yearlyPackageDialog instanceof HTMLDialogElement &&
+                yearlyPackageDialog instanceof
+                HTMLDialogElement &&
                 !yearlyPackageDialog.open
             ) {
+
                 yearlyPackageDialog.showModal();
+
             }
+
         }
     );
+
 
     yearlyPackageClose?.addEventListener(
         "click",
         () => {
-            if (yearlyPackageDialog instanceof HTMLDialogElement) {
+
+            if (
+                yearlyPackageDialog instanceof
+                HTMLDialogElement
+            ) {
+
                 yearlyPackageDialog.close();
+
             }
+
         }
     );
+
 
     yearlyPackageDialog?.addEventListener(
         "click",
         event => {
+
             if (
-                event.target === yearlyPackageDialog &&
-                yearlyPackageDialog instanceof HTMLDialogElement
+                event.target ===
+                    yearlyPackageDialog &&
+                yearlyPackageDialog instanceof
+                    HTMLDialogElement
             ) {
+
                 yearlyPackageDialog.close();
+
             }
+
         }
     );
 
@@ -1641,9 +2557,7 @@ const contentTranslations = {
                         !id ||
                         id === "#"
                     ) {
-
                         return;
-
                     }
 
 
@@ -1654,9 +2568,7 @@ const contentTranslations = {
 
 
                     if (!target) {
-
                         return;
-
                     }
 
 
@@ -1716,7 +2628,6 @@ const contentTranslations = {
                                 "visible"
                             );
 
-
                             revealObserver.unobserve(
                                 entry.target
                             );
@@ -1728,7 +2639,9 @@ const contentTranslations = {
 
             },
             {
-                threshold: 0.12,
+
+                threshold:
+                    0.12,
 
                 rootMargin:
                     "0px 0px -50px 0px"
@@ -1776,6 +2689,10 @@ const contentTranslations = {
     );
 
 
+    /* =====================================================
+       GALLERY MOTION
+    ===================================================== */
+
     const motionGalleryItems =
         document.querySelectorAll(
             ".gallery-item"
@@ -1810,40 +2727,74 @@ const contentTranslations = {
         !prefersReducedMotion
     ) {
 
-        let galleryAnimationFrame = null;
+        let galleryAnimationFrame =
+            null;
+
 
         function updateGalleryBallPosition() {
 
             const galleryRect =
                 gallerySection.getBoundingClientRect();
 
+
             const viewportProgress =
                 Math.min(
                     Math.max(
-                        (window.innerHeight - galleryRect.top) /
-                        (galleryRect.height + window.innerHeight),
+                        (
+                            window.innerHeight -
+                            galleryRect.top
+                        ) /
+                        (
+                            galleryRect.height +
+                            window.innerHeight
+                        ),
                         0
                     ),
                     1
                 );
 
+
             const travel =
-                viewportProgress * (motionGalleryItems.length - 1);
+                viewportProgress *
+                (
+                    motionGalleryItems.length -
+                    1
+                );
+
 
             const segmentIndex =
                 Math.min(
-                    Math.floor(travel),
-                    motionGalleryItems.length - 2
+                    Math.floor(
+                        travel
+                    ),
+                    motionGalleryItems.length -
+                    2
                 );
 
+
             const localT =
-                travel - segmentIndex;
+                travel -
+                segmentIndex;
+
 
             const itemA =
-                motionGalleryItems[segmentIndex];
+                motionGalleryItems[
+                    segmentIndex
+                ];
 
             const itemB =
-                motionGalleryItems[segmentIndex + 1];
+                motionGalleryItems[
+                    segmentIndex + 1
+                ];
+
+
+            if (
+                !itemA ||
+                !itemB
+            ) {
+                return;
+            }
+
 
             const rectA =
                 itemA.getBoundingClientRect();
@@ -1851,52 +2802,120 @@ const contentTranslations = {
             const rectB =
                 itemB.getBoundingClientRect();
 
+
             const centerA = {
-                x: rectA.left - galleryRect.left + rectA.width / 2,
-                y: rectA.top - galleryRect.top + rectA.height / 2
+
+                x:
+                    rectA.left -
+                    galleryRect.left +
+                    rectA.width / 2,
+
+                y:
+                    rectA.top -
+                    galleryRect.top +
+                    rectA.height / 2
+
             };
 
+
             const centerB = {
-                x: rectB.left - galleryRect.left + rectB.width / 2,
-                y: rectB.top - galleryRect.top + rectB.height / 2
+
+                x:
+                    rectB.left -
+                    galleryRect.left +
+                    rectB.width / 2,
+
+                y:
+                    rectB.top -
+                    galleryRect.top +
+                    rectB.height / 2
+
             };
+
 
             const curveShift =
                 Math.min(
                     180,
-                    Math.max(90, Math.abs(centerB.x - centerA.x) * 0.65)
+                    Math.max(
+                        90,
+                        Math.abs(
+                            centerB.x -
+                            centerA.x
+                        ) * 0.65
+                    )
                 );
 
+
             const controlX =
-                (centerA.x + centerB.x) / 2 +
-                (centerB.x - centerA.x) * 0.14;
+                (
+                    centerA.x +
+                    centerB.x
+                ) / 2 +
+                (
+                    centerB.x -
+                    centerA.x
+                ) * 0.14;
+
 
             const controlY =
-                Math.min(centerA.y, centerB.y) -
+                Math.min(
+                    centerA.y,
+                    centerB.y
+                ) -
                 curveShift;
 
+
             const x =
-                (1 - localT) * (1 - localT) * centerA.x +
-                2 * (1 - localT) * localT * controlX +
-                localT * localT * centerB.x;
+                (1 - localT) *
+                (1 - localT) *
+                centerA.x +
+
+                2 *
+                (1 - localT) *
+                localT *
+                controlX +
+
+                localT *
+                localT *
+                centerB.x;
+
 
             const y =
-                (1 - localT) * (1 - localT) * centerA.y +
-                2 * (1 - localT) * localT * controlY +
-                localT * localT * centerB.y;
+                (1 - localT) *
+                (1 - localT) *
+                centerA.y +
+
+                2 *
+                (1 - localT) *
+                localT *
+                controlY +
+
+                localT *
+                localT *
+                centerB.y;
+
 
             motionGalleryBall.style.transform =
                 `translate3d(${x}px, ${y}px, 0)`;
+
 
             motionGalleryItems.forEach(
                 (item, index) => {
 
                     const normalized =
-                        index / (motionGalleryItems.length - 1);
+                        index /
+                        (
+                            motionGalleryItems.length -
+                            1
+                        );
+
 
                     item.classList.toggle(
                         "is-active",
-                        Math.abs(viewportProgress - normalized) < 0.14
+                        Math.abs(
+                            viewportProgress -
+                            normalized
+                        ) < 0.14
                     );
 
                 }
@@ -1904,34 +2923,53 @@ const contentTranslations = {
 
         }
 
+
         function requestGalleryBallUpdate() {
 
-            if (galleryAnimationFrame) {
-                cancelAnimationFrame(galleryAnimationFrame);
+            if (
+                galleryAnimationFrame
+            ) {
+
+                cancelAnimationFrame(
+                    galleryAnimationFrame
+                );
+
             }
 
+
             galleryAnimationFrame =
-                requestAnimationFrame(() => {
+                requestAnimationFrame(
+                    () => {
 
-                    updateGalleryBallPosition();
-                    galleryAnimationFrame = null;
+                        updateGalleryBallPosition();
 
-                });
+                        galleryAnimationFrame =
+                            null;
+
+                    }
+                );
 
         }
 
+
         requestGalleryBallUpdate();
+
 
         window.addEventListener(
             "scroll",
             requestGalleryBallUpdate,
-            { passive: true }
+            {
+                passive: true
+            }
         );
+
 
         window.addEventListener(
             "resize",
             requestGalleryBallUpdate,
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
     }
@@ -1979,7 +3017,8 @@ const contentTranslations = {
 
                                     link.classList.toggle(
                                         "active",
-                                        href === `#${id}`
+                                        href ===
+                                            `#${id}`
                                     );
 
                                 }
@@ -1992,7 +3031,8 @@ const contentTranslations = {
 
             },
             {
-                threshold: 0.35
+                threshold:
+                    0.35
             }
         );
 
@@ -2017,7 +3057,9 @@ const contentTranslations = {
             ".gallery-item"
         );
 
-    let activeGalleryIndex = 0;
+
+    let activeGalleryIndex =
+        0;
 
 
     function updateLightbox(index) {
@@ -2035,56 +3077,85 @@ const contentTranslations = {
             !image ||
             !lightboxImage
         ) {
-
             return;
-
         }
 
 
-        activeGalleryIndex = index;
+        activeGalleryIndex =
+            index;
+
 
         lightboxImage.classList.remove(
             "lightbox-image-changing"
         );
 
 
-        requestAnimationFrame(() => {
+        requestAnimationFrame(
+            () => {
 
-            lightboxImage.src =
-                image.currentSrc ||
-                image.src;
+                lightboxImage.src =
+                    image.currentSrc ||
+                    image.src;
 
-            lightboxImage.alt =
-                image.alt ||
-                "Golf image";
 
-            lightboxCaption.textContent =
-                item.querySelector(
-                    ".gallery-overlay span"
-                )?.textContent.trim() ||
-                image.alt ||
-                "Golf image";
+                lightboxImage.alt =
+                    image.alt ||
+                    "Golf image";
 
-            lightboxCounter.textContent =
-                `${String(index + 1).padStart(2, "0")} / ${String(galleryItems.length).padStart(2, "0")}`;
 
-            lightboxImage.classList.add(
-                "lightbox-image-changing"
-            );
+                if (lightboxCaption) {
 
-        });
+                    lightboxCaption.textContent =
+                        item.querySelector(
+                            ".gallery-overlay span"
+                        )?.textContent.trim() ||
+                        image.alt ||
+                        "Golf image";
+
+                }
+
+
+                if (lightboxCounter) {
+
+                    lightboxCounter.textContent =
+                        `${String(index + 1).padStart(2, "0")} / ${String(galleryItems.length).padStart(2, "0")}`;
+
+                }
+
+
+                lightboxImage.classList.add(
+                    "lightbox-image-changing"
+                );
+
+            }
+        );
 
     }
 
 
-    function showNextGalleryImage(direction) {
+    function showNextGalleryImage(
+        direction
+    ) {
+
+        if (
+            !galleryItems.length
+        ) {
+            return;
+        }
+
 
         const nextIndex =
-            (activeGalleryIndex + direction + galleryItems.length) %
+            (
+                activeGalleryIndex +
+                direction +
+                galleryItems.length
+            ) %
             galleryItems.length;
 
 
-        updateLightbox(nextIndex);
+        updateLightbox(
+            nextIndex
+        );
 
     }
 
@@ -2097,15 +3168,18 @@ const contentTranslations = {
                 "0"
             );
 
+
             item.setAttribute(
                 "role",
                 "button"
             );
 
+
             item.setAttribute(
                 "aria-label",
                 `Open gallery image ${index + 1}`
             );
+
 
             item.addEventListener(
                 "click",
@@ -2115,13 +3189,13 @@ const contentTranslations = {
                         !lightbox ||
                         !lightboxImage
                     ) {
-
                         return;
-
                     }
 
 
-                    updateLightbox(index);
+                    updateLightbox(
+                        index
+                    );
 
 
                     lightbox.classList.add(
@@ -2141,6 +3215,7 @@ const contentTranslations = {
 
                 }
             );
+
 
             item.addEventListener(
                 "keydown",
@@ -2167,9 +3242,7 @@ const contentTranslations = {
     function closeLightbox() {
 
         if (!lightbox) {
-
             return;
-
         }
 
 
@@ -2199,13 +3272,15 @@ const contentTranslations = {
 
     lightboxPrev?.addEventListener(
         "click",
-        () => showNextGalleryImage(-1)
+        () =>
+            showNextGalleryImage(-1)
     );
 
 
     lightboxNext?.addEventListener(
         "click",
-        () => showNextGalleryImage(1)
+        () =>
+            showNextGalleryImage(1)
     );
 
 
@@ -2235,9 +3310,7 @@ const contentTranslations = {
                     "active"
                 )
             ) {
-
                 return;
-
             }
 
 
@@ -2269,9 +3342,7 @@ const contentTranslations = {
     function updateBackTop() {
 
         if (!backTop) {
-
             return;
-
         }
 
 
@@ -2350,17 +3421,17 @@ const contentTranslations = {
                     window.innerHeight
                 ) {
 
-                    const slides =
+                    const heroImages =
                         document.querySelectorAll(
                             ".hero-slide img"
                         );
 
 
-                    slides.forEach(
+                    heroImages.forEach(
                         image => {
 
                             image.style.transform =
-                                `translateY(${scroll * .08}px)`;
+                                `translateY(${scroll * 0.08}px)`;
 
                         }
                     );
@@ -2400,11 +3471,9 @@ const contentTranslations = {
     ) {
 
         let mouseX = 0;
-
         let mouseY = 0;
 
         let ringX = 0;
-
         let ringY = 0;
 
 
@@ -2432,12 +3501,19 @@ const contentTranslations = {
         function animateCursor() {
 
             ringX +=
-                (mouseX - ringX) *
-                .14;
+                (
+                    mouseX -
+                    ringX
+                ) *
+                0.14;
+
 
             ringY +=
-                (mouseY - ringY) *
-                .14;
+                (
+                    mouseY -
+                    ringY
+                ) *
+                0.14;
 
 
             cursorRing.style.left =
@@ -2529,16 +3605,24 @@ const contentTranslations = {
 
 
                         const rotateX =
-                            ((y /
-                                rect.height) -
-                                .5) *
+                            (
+                                (
+                                    y /
+                                    rect.height
+                                ) -
+                                0.5
+                            ) *
                             -2;
 
 
                         const rotateY =
-                            ((x /
-                                rect.width) -
-                                .5) *
+                            (
+                                (
+                                    x /
+                                    rect.width
+                                ) -
+                                0.5
+                            ) *
                             2;
 
 
@@ -2608,6 +3692,358 @@ const contentTranslations = {
 
 
     /* =====================================================
+       VIDEO AUTOPLAY ON SCROLL
+    ===================================================== */
+
+    const coachVideo =
+        document.getElementById(
+            "coach-video"
+        );
+
+
+    if (
+        coachVideo &&
+        !prefersReducedMotion
+    ) {
+
+        const videoObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                coachVideo
+                                    .play()
+                                    .catch(
+                                        () => {}
+                                    );
+
+                            } else {
+
+                                coachVideo.pause();
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold:
+                        0.55
+                }
+            );
+
+
+        videoObserver.observe(
+            coachVideo
+        );
+
+    }
+
+
+    /* =====================================================
+       MONTHLY PACKAGE CURRENCY SWITCH
+       USD / QAR
+    ===================================================== */
+
+    const MONTHLY_USD_TO_QAR =
+        3.64;
+
+
+    const monthlyCurrencyButtons =
+        document.querySelectorAll(
+            ".plan-card .currency-btn"
+        );
+
+
+    const monthlyPrice =
+        document.querySelector(
+            ".plan-card .currency-price"
+        );
+
+
+    if (
+        monthlyCurrencyButtons.length &&
+        monthlyPrice
+    ) {
+
+        monthlyCurrencyButtons.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const currency =
+                            this.dataset.currency;
+
+
+                        monthlyCurrencyButtons.forEach(
+                            btn => {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        monthlyPrice.style.opacity =
+                            "0";
+
+                        monthlyPrice.style.transform =
+                            "translateY(6px)";
+
+
+                        setTimeout(
+                            () => {
+
+                                const usdAmount =
+                                    Number(
+                                        monthlyPrice.dataset.usd
+                                            .replace(
+                                                /[^0-9.]/g,
+                                                ""
+                                            )
+                                    );
+
+
+                                const qarAmount =
+                                    Math.round(
+                                        usdAmount *
+                                        MONTHLY_USD_TO_QAR
+                                    );
+
+
+                                if (
+                                    currency ===
+                                    "usd"
+                                ) {
+
+                                    monthlyPrice.textContent =
+                                        monthlyPrice.dataset.usd;
+
+                                } else {
+
+                                    monthlyPrice.textContent =
+                                        `QAR ${qarAmount.toLocaleString("en-US")}`;
+
+                                }
+
+
+                                requestAnimationFrame(
+                                    () => {
+
+                                        monthlyPrice.style.opacity =
+                                            "1";
+
+                                        monthlyPrice.style.transform =
+                                            "translateY(0)";
+
+                                    }
+                                );
+
+                            },
+                            180
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       YEARLY PACKAGE CURRENCY SWITCH
+       USD / QAR
+    ===================================================== */
+
+    const YEARLY_USD_TO_QAR =
+        3.64;
+
+
+    const yearlyCurrencyButtons =
+        document.querySelectorAll(
+            ".yearly-currency-btn"
+        );
+
+
+    const yearlyPrice =
+        document.getElementById(
+            "yearly-main-price"
+        );
+
+
+    const yearlyPriceLabel =
+        document.querySelector(
+            ".yearly-price-label span"
+        );
+
+
+    const yearlyPerYear =
+        document.querySelector(
+            ".yearly-price-main > span:last-child"
+        );
+
+
+    if (
+        yearlyCurrencyButtons.length &&
+        yearlyPrice
+    ) {
+
+        yearlyCurrencyButtons.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const currency =
+                            this.dataset.yearlyCurrency;
+
+
+                        yearlyCurrencyButtons.forEach(
+                            btn => {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        yearlyPrice.style.opacity =
+                            "0";
+
+                        yearlyPrice.style.transform =
+                            "translateY(8px)";
+
+
+                        setTimeout(
+                            () => {
+
+                                const usdAmount =
+                                    Number(
+                                        yearlyPrice.dataset.usd
+                                    );
+
+
+                                const qarAmount =
+                                    Math.round(
+                                        usdAmount *
+                                        YEARLY_USD_TO_QAR
+                                    );
+
+
+                                if (
+                                    currency ===
+                                    "usd"
+                                ) {
+
+                                    yearlyPrice.textContent =
+                                        `$${usdAmount.toLocaleString("en-US")}`;
+
+
+                                    if (
+                                        yearlyPriceLabel
+                                    ) {
+
+                                        yearlyPriceLabel.textContent =
+                                            "USD";
+
+                                    }
+
+
+                                    if (
+                                        yearlyPerYear
+                                    ) {
+
+                                        yearlyPerYear.textContent =
+                                            "/ YEAR";
+
+                                    }
+
+                                }
+
+
+                                if (
+                                    currency ===
+                                    "qar"
+                                ) {
+
+                                    yearlyPrice.textContent =
+                                        `QAR ${qarAmount.toLocaleString("en-US")}`;
+
+
+                                    if (
+                                        yearlyPriceLabel
+                                    ) {
+
+                                        yearlyPriceLabel.textContent =
+                                            "QAR";
+
+                                    }
+
+
+                                    if (
+                                        yearlyPerYear
+                                    ) {
+
+                                        yearlyPerYear.textContent =
+                                            "/ YEAR";
+
+                                    }
+
+                                }
+
+
+                                requestAnimationFrame(
+                                    () => {
+
+                                        yearlyPrice.style.opacity =
+                                            "1";
+
+                                        yearlyPrice.style.transform =
+                                            "translateY(0)";
+
+                                    }
+                                );
+
+                            },
+                            180
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
        RESIZE
     ===================================================== */
 
@@ -2624,13 +4060,16 @@ const contentTranslations = {
                     currentSlide
                 );
 
-            } else if (heroSection) {
+            } else if (
+                heroSection
+            ) {
 
                 heroSection.style.removeProperty(
                     "aspect-ratio"
                 );
 
             }
+
 
             if (
                 window.innerWidth > 800
@@ -2687,278 +4126,44 @@ const contentTranslations = {
     console.log(
         "USGTF Professional · Doha, Qatar"
     );
-
-});
 /* =========================================================
-   VIDEO AUTOPLAY ON SCROLL
+   COACHING SEQUENTIAL REVEAL
+   BALL → CARD 01 → CARD 02 → CARD 03 → CARD 04
 ========================================================= */
 
-const coachVideo = document.getElementById("coach-video");
+const coachingSection =
+    document.querySelector(".coaching-section");
 
-if (coachVideo) {
+if (coachingSection) {
 
-    const videoObserver = new IntersectionObserver(
-        (entries) => {
+    const coachingObserver =
+        new IntersectionObserver(
+            (entries, observer) => {
 
-            entries.forEach((entry) => {
+                entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    // Start playing when video enters the viewport
-                    coachVideo.play().catch(() => {
-                        // Browser blocked autoplay
-                    });
+                        coachingSection.classList.add(
+                            "coaching-active"
+                        );
 
-                } else {
+                        observer.unobserve(
+                            coachingSection
+                        );
 
-                    // Pause when video leaves the viewport
-                    coachVideo.pause();
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.55
-        }
-    );
-
-    videoObserver.observe(coachVideo);
-}/* =========================================================
-   PACKAGE CURRENCY SWITCH
-   USD / QAR
-========================================================= */
-
-(function () {
-
-    const USD_TO_QAR = 3.64;
-
-    const buttons = document.querySelectorAll(
-        ".plan-card .currency-btn"
-    );
-
-    const price = document.querySelector(
-        ".plan-card .currency-price"
-    );
-
-    if (!buttons.length || !price) return;
-
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", function () {
-
-            const currency = this.dataset.currency;
-
-
-            /* -----------------------------------------
-               Update active button
-            ----------------------------------------- */
-
-            buttons.forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-
-            /* -----------------------------------------
-               Price animation
-            ----------------------------------------- */
-
-            price.style.opacity = "0";
-            price.style.transform = "translateY(6px)";
-
-
-            setTimeout(() => {
-
-                const usdAmount = Number(
-                    price.dataset.usd.replace(/[^0-9.]/g, "")
-                );
-
-
-                const qarAmount = Math.round(
-                    usdAmount * USD_TO_QAR
-                );
-
-
-                /* -----------------------------------------
-                   Change price
-                ----------------------------------------- */
-
-                if (currency === "usd") {
-
-                    price.textContent =
-                        price.dataset.usd;
-
-                } else {
-
-                    price.textContent =
-                        `QAR ${qarAmount.toLocaleString("en-US")}`;
-
-                }
-
-
-                /* -----------------------------------------
-                   Bring price back
-                ----------------------------------------- */
-
-                price.style.opacity = "1";
-                price.style.transform = "translateY(0)";
-
-            }, 180);
-
-        });
-
-    });
-
-})();
-/* =========================================================
-   YEARLY PACKAGE CURRENCY SWITCH
-   USD / QAR
-========================================================= */
-
-(function () {
-
-    const USD_TO_QAR = 3.64;
-
-    const buttons = document.querySelectorAll(
-        ".yearly-currency-btn"
-    );
-
-    const price = document.querySelector(
-        "#yearly-main-price"
-    );
-
-    const priceLabel = document.querySelector(
-        ".yearly-price-label span"
-    );
-
-    const perYear = document.querySelector(
-        ".yearly-price-main > span:last-child"
-    );
-
-
-    /* -----------------------------------------
-       SAFETY CHECK
-    ----------------------------------------- */
-
-    if (!buttons.length || !price) {
-        return;
-    }
-
-
-    /* -----------------------------------------
-       CURRENCY BUTTONS
-    ----------------------------------------- */
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", function () {
-
-            const currency =
-                this.dataset.yearlyCurrency;
-
-
-            /* -----------------------------------------
-               REMOVE ACTIVE FROM ALL
-            ----------------------------------------- */
-
-            buttons.forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-
-            /* -----------------------------------------
-               ACTIVATE SELECTED CURRENCY
-            ----------------------------------------- */
-
-            this.classList.add("active");
-
-
-            /* -----------------------------------------
-               PRICE EXIT ANIMATION
-            ----------------------------------------- */
-
-            price.style.opacity = "0";
-
-            price.style.transform =
-                "translateY(8px)";
-
-
-            /* -----------------------------------------
-               UPDATE PRICE
-            ----------------------------------------- */
-
-            setTimeout(() => {
-
-                const usdAmount =
-                    Number(price.dataset.usd);
-
-                const qarAmount =
-                    Math.round(
-                        usdAmount * USD_TO_QAR
-                    );
-
-
-                if (currency === "usd") {
-
-                    price.textContent =
-                        `$${usdAmount.toLocaleString("en-US")}`;
-
-
-                    if (priceLabel) {
-                        priceLabel.textContent =
-                            "USD";
                     }
-
-
-                    if (perYear) {
-                        perYear.textContent =
-                            "/ YEAR";
-                    }
-
-                }
-
-
-                if (currency === "qar") {
-
-                    price.textContent =
-                        `QAR ${qarAmount.toLocaleString("en-US")}`;
-
-
-                    if (priceLabel) {
-                        priceLabel.textContent =
-                            "QAR";
-                    }
-
-
-                    if (perYear) {
-                        perYear.textContent =
-                            "/ YEAR";
-                    }
-
-                }
-
-
-                /* -----------------------------------------
-                   PRICE RETURN ANIMATION
-                ----------------------------------------- */
-
-                requestAnimationFrame(() => {
-
-                    price.style.opacity = "1";
-
-                    price.style.transform =
-                        "translateY(0)";
 
                 });
 
-            }, 180);
+            },
+            {
+                threshold: 0.18
+            }
+        );
 
-        });
-
-    });
-
-})();
+    coachingObserver.observe(
+        coachingSection
+    );
+}
+});
