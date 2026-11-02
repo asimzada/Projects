@@ -103,7 +103,34 @@ document.addEventListener("DOMContentLoaded", () => {
             seriousPlayersText: "Discover the Yearly Package",
             seriousPlayersButton: "Discover the Yearly Package",
 
-            videoDesc: "A closer look at practical golf, movement, technique and play."
+            videoDesc: "A closer look at practical golf, movement, technique and play.",coachingLine1: "Practical",
+coachingLine2: "coaching.",
+coachingIntro: "Sessions start with understanding where you are and what you want to achieve. Coaching is tailored for beginners, intermediate and advanced players.",
+
+coachingCategory1: "FOUNDATION",
+coachingTitle1A: "Full",
+coachingTitle1B: "Swing",
+coachingDescription1: "Grip, posture, alignment and consistency.",
+coachingDetail1: "BUILD CONSISTENCY",
+
+coachingCategory2: "CONTROL",
+coachingTitle2A: "Short",
+coachingTitle2B: "Game",
+coachingDescription2: "Control and confidence around the green.",
+coachingDetail2: "CONTROL YOUR DISTANCE",
+
+coachingCategory3: "PRECISION",
+coachingTitle3: "Putting",
+coachingDescription3: "Touch and distance control.",
+coachingDetail3: "FIND YOUR TOUCH",
+
+coachingCategory4: "SITUATIONAL",
+coachingTitle4A: "Bunker",
+coachingTitle4B: "Play",
+coachingDescription4: "Practical techniques for different situations.",
+coachingDetail4: "PLAY WITH CONFIDENCE",
+
+coachingBottom: "The goal is to turn better golf understanding into confident decisions and better performance."
 
         },
 
@@ -182,7 +209,34 @@ document.addEventListener("DOMContentLoaded", () => {
             seriousPlayersText: "اكتشف باقة التدريب السنوية",
             seriousPlayersButton: "اكتشف الباقة السنوية",
 
-            videoDesc: "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب."
+            videoDesc: "نظرة أعمق على الجولف العملي، الحركة، الأسلوب واللعب.",coachingLine1: "تدريب",
+coachingLine2: "عملي يصنع الفرق.",
+coachingIntro: "نبدأ بفهم مستواك وما تطمح إلى تحقيقه، ثم نصمم التدريب ليناسب المبتدئين والمتوسطين والمتقدمين.",
+
+coachingCategory1: "التأسيس",
+coachingTitle1A: "الضربة",
+coachingTitle1B: "الكاملة",
+coachingDescription1: "القبضة والوقفة والمحاذاة وثبات الأداء.",
+coachingDetail1: "ابنِ أداءً أكثر ثباتاً",
+
+coachingCategory2: "التحكم",
+coachingTitle2A: "اللعب",
+coachingTitle2B: "القصير",
+coachingDescription2: "تحكم وثقة أكبر حول منطقة الحفرة.",
+coachingDetail2: "تحكّم في المسافة",
+
+coachingCategory3: "الدقة",
+coachingTitle3: "ضربات التهديف",
+coachingDescription3: "إحساس أدق وتحكم بالمسافة.",
+coachingDetail3: "اكتشف دقة لمستك",
+
+coachingCategory4: "مواقف اللعب",
+coachingTitle4A: "اللعب من",
+coachingTitle4B: "الحواجز الرملية",
+coachingDescription4: "أساليب عملية للتعامل مع مختلف المواقف.",
+coachingDetail4: "العب بثقة",
+
+coachingBottom: "هدفنا أن يتحول فهمك الأفضل للجولف إلى قرارات واثقة وأداء أقوى."
 
         }
 
