@@ -322,7 +322,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "Practical coaching.":
             "تدريب عملي يصنع الفرق.",
+        /* COACHING SECTION TRANSLATION FIX */
 
+        "Practical":
+            "تدريب",
+
+        "coaching.":
+            "عملي.",
+
+        "FOUNDATION":
+            "التأسيس",
+
+        "BUILD CONSISTENCY":
+            "ابنِ أداءً أكثر ثباتاً",
+
+        "Full":
+            "الضربة",
+
+        "Swing":
+            "الكاملة",
+
+        "CONTROL":
+            "التحكم",
+
+        "Short":
+            "اللعب",
+
+        "Game":
+            "القصير",
+
+        "CONTROL YOUR DISTANCE":
+            "تحكّم في المسافة",
+
+        "PRECISION":
+            "الدقة",
+
+        "FIND YOUR TOUCH":
+            "اكتشف دقة لمستك",
+
+        "SITUATIONAL":
+            "المواقف المختلفة",
+
+        "Bunker":
+            "اللعب من المخابئ",
+
+        "Play":
+            "الرملية",
+
+        "PLAY WITH CONFIDENCE":
+            "العب بثقة",
+
+        "Training":
+            "التدريب",
         "Sessions start with understanding where you are and what you want to achieve. Coaching is tailored for beginners, intermediate and advanced players.":
             "نبدأ بفهم مستواك وما تطمح إلى تحقيقه، ثم نصمم التدريب ليناسب المبتدئين والمتوسطين والمتقدمين.",
 
